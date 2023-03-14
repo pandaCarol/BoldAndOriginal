@@ -8,12 +8,15 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 16px;
 
-    & button {
+    & button, h2, h5, p {
         font-family: 'Alata', sans-serif;
+    }
+
+    & button {
         font-size: 16px;
     }
     
-`;
+`
 
 export const defaultButton = styled.button`
     width: 120px;
@@ -30,4 +33,15 @@ export const defaultNaviButton = styled.button`
     &:first-child {
         width: 270px;
     }
+`
+
+export const defaultSection = styled.section`
+    text-align: left;
+`
+
+export const defaultTitle = styled.h2`
+`
+export const defaultSubTitle = styled.h5`
+`
+export const defaultsText = styled.p`
 `

@@ -8,13 +8,15 @@ import {
 } from 'react-router-dom';
 
 import { NavBar } from './app/NavBar';
+import { Homepage } from './app/Homepage';
 
 
 
 function App() {
   return (
       <Container>
-        <NavBar></NavBar>
+        <NavBar />
+        <Homepage />
       </Container>
   );
 }
