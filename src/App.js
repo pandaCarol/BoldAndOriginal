@@ -9,6 +9,7 @@ import {
 
 import { NavBar } from './app/NavBar';
 import { Homepage } from './app/Homepage';
+import { FeaturesPage } from './app/featurespage';
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Container>
         <NavBar />
         <Homepage />
+        <FeaturesPage />
       </Container>
   );
 }

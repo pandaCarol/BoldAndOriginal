@@ -1,21 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { defaultSection, defaultTitle, defaultsText, defaultSubTitle } from "../css/cssDefault";
 
-import { defaultSection, defaultTitle, defaultSubTitle, defaultsText } from '../css/cssDefault';
-
-const ContentWrapper = styled(defaultSection)`
-    width: 60%;
-    padding: 240px 0;
-    margin: auto 4vw;
+const BenefitsWrapper = styled(defaultSection)`
+    margin: 2vw 4vw;
 `
-const Title = styled(defaultTitle)`
+const Title = styled(defaultSubTitle)`
 
 `
 const Subtitle = styled(defaultsText)`
-    width: 65%;
 `
 
-export const Content = ({titles, subtitles}) => {
+export const Benefits = ({titles, subtitles}) => {
     const titleContents = titles.map((title, index) => {
         return (
             <Title key={index}>{title}</Title>
@@ -29,9 +25,9 @@ export const Content = ({titles, subtitles}) => {
     })
 
     return (
-        <ContentWrapper>
+        <BenefitsWrapper>
             {titleContents}
             {subtitleContents}
-        </ContentWrapper>
+        </BenefitsWrapper>
     )
 }

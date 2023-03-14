@@ -13,18 +13,18 @@ const HomeContent = {
 
 const HomeWrapper = styled.div`
     display: flex;
-    height: 80vh;
-    position: relative;
+    height: 100vh;
 
     &&:before {
         position: absolute;
+        top: 10%;
         z-index: -1;
         content: "";
-        width 100%;
-        height: 95%; 
+        width 80%;
+        height: 85%; 
         background-image: url(${props => props.img});
         background-repeat: no-repeat;
-        background-size: 75% 100%;
+        background-size: 85% 100%;
         opacity: 0.45;
     }
 `

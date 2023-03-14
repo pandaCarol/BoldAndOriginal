@@ -7,13 +7,17 @@ import logoColor from '../imgs/logo/logoColor.png';
 
 
 const HeaderWrapper = styled.header`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+
     display: flex;
-    margin: 12px;
-    height: 15vh;
+    margin: 0; 
 `
 const NavWrapper = styled.section`
     text-align: right;
-    width: 100vw;
+    width: 100%;
 `
 const  NavContents = {
     icon: logoColor,

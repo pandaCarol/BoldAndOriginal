@@ -8,7 +8,7 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 16px;
 
-    & button, h2, h5, p {
+    & button, h2, h3, p {
         font-family: 'Alata', sans-serif;
     }
 
@@ -41,7 +41,7 @@ export const defaultSection = styled.section`
 
 export const defaultTitle = styled.h2`
 `
-export const defaultSubTitle = styled.h5`
+export const defaultSubTitle = styled.h3`
 `
 export const defaultsText = styled.p`
 `
