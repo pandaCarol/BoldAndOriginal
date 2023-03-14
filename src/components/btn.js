@@ -26,7 +26,7 @@ const LoginBtn = styled(defaultButton)`
         height: 42px;
         margin: 0;
         box-shadow: 0px 6px rgba(33, 33, 34, 0.5);
-        animation: onHover 1s ease-out;
+        animation: onHover 0.5s ease-out;
     }
 `
 export const ContactSale = ({ contents }) => {
