@@ -4,6 +4,7 @@ import styled from "styled-components";
 const IconDiv = styled.img`
     widt: 150px;
     height: 94px;
+    margin: 18px;
 
     &:hover {
         cursor: pointer;

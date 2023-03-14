@@ -8,7 +8,7 @@ import logoColor from '../imgs/logo/logoColor.png';
 
 const HeaderWrapper = styled.header`
     display: flex;
-    margin: 30px;
+    margin: 12px;
 `
 const NavWrapper = styled.section`
     text-align: right;

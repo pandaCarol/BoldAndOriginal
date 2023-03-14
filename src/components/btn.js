@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { defaultButton } from '../css/cssDefault'
 
 const LoginWrapper = styled.div`
-    margin: 12px 36px;
+    margin: 6px 36px;
 `
 const LoginBtn = styled(defaultButton)`
     margin: 0 0 6px;
