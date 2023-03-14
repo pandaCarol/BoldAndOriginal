@@ -6,24 +6,24 @@ export const Container = styled.div`
 
     text-align: center;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
 
     & button {
         font-family: 'Alata', sans-serif;
-        font-size: 20px;
+        font-size: 16px;
     }
     
 `;
 
 export const defaultButton = styled.button`
-    width: 150px;
+    width: 120px;
     height: 36px;
     border-radius: 24px;
     background: #FBD909;
 `
 export const defaultNaviButton = styled.button`
     width: 120px;
-    height: 60px;
+    height: 36px;
     background: white;
     border: none;
 
