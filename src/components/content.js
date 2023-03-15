@@ -5,14 +5,14 @@ import { defaultSection, defaultTitle, defaultSubTitle, defaultsText } from '../
 
 const ContentWrapper = styled(defaultSection)`
     width: 60%;
-    padding: 240px 0;
+    padding: 260px 0;
     margin: auto 4vw;
 `
 const Title = styled(defaultTitle)`
-
+    font-size: 30px;
 `
 const Subtitle = styled(defaultsText)`
-    width: 65%;
+    font-size: 20px;
 `
 
 export const Content = ({titles, subtitles}) => {

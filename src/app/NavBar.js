@@ -13,7 +13,7 @@ const HeaderWrapper = styled.header`
     background-color: white;
 
     display: flex;
-    margin: 0; 
+    padding: 12px 0; 
 `
 const NavWrapper = styled.section`
     text-align: right;

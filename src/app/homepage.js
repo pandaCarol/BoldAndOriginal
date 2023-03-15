@@ -17,11 +17,12 @@ const HomeWrapper = styled.div`
 
     &&:before {
         position: absolute;
+        width: 80%;
+        height: 85%;
         top: 10%;
         z-index: -1;
+
         content: "";
-        width 80%;
-        height: 85%; 
         background-image: url(${props => props.img});
         background-repeat: no-repeat;
         background-size: 85% 100%;

@@ -10,7 +10,6 @@ const IconDiv = styled.img`
         cursor: pointer;
         width: 160px;
         height: 100px;
-        background-color: rgba(251,217,9, 0.25);
 
         border-radius: 150px;
     }

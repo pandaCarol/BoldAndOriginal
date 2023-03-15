@@ -9,11 +9,11 @@ const NaviButton = styled(defaultNaviButton)`
         cursor: pointer;
         
         font-weight: 700;
-        letter-spacing: 2px;
-        color: #555B70;
+        color: #007C97;
 
     }
 `
+//letter-spacing: 0px;
 export const NavigationBar = ({contents})  => {
     const naviContents = contents.map(content => {
         return(
