@@ -10,6 +10,7 @@ import {
 import { NavBar } from './app/NavBar';
 import { Homepage } from './app/Homepage';
 import { FeaturesPage } from './app/featurespage';
+import { Pricing } from './app/Pricing';
 
 
 
@@ -17,8 +18,12 @@ function App() {
   return (
       <Container>
         <NavBar />
-        <Homepage />
-        <FeaturesPage />
+        <main>
+          <Homepage />
+          <FeaturesPage />
+          <Pricing />
+        </main>
+        
       </Container>
   );
 }

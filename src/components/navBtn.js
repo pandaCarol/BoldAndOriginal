@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { defaultNaviButton } from "../css/cssDefault";
+import { defaultNaviButton, defaultSection } from "../css/cssDefault";
 
-const BarWrapper = styled.section`
+const BarWrapper = styled(defaultSection)`
+    margin-top: 0.5rem;
+    flex-direction: row;
+    align-self: flex-end;
 `
 const NaviButton = styled(defaultNaviButton)`
     &:hover {

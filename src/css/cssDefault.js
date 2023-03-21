@@ -2,14 +2,16 @@ import styled from "styled-components";
 //import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 export const Container = styled.div`
+    box-sizing: border-box;
     @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
     text-align: center;
     font-weight: 400;
     font-size: 16px;
 
-    & button, h2, h3, p {
+    & button, h1, h2, h3, p, ul, li {
         font-family: 'Alata', sans-serif;
+        box-sizing: border-box;
     }
 
     & button {
@@ -25,17 +27,15 @@ export const defaultButton = styled.button`
     background: #FBD909;
 `
 export const defaultNaviButton = styled.button`
-    width: 120px;
+    margin: auto 1rem;
     height: 36px;
     background: white;
     border: none;
-
-    &:first-child {
-        width: 270px;
-    }
 `
 
 export const defaultSection = styled.section`
+    display: flex;
+    flex-direction: column;
     text-align: left;
 `
 
@@ -44,4 +44,11 @@ export const defaultTitle = styled.h2`
 export const defaultSubTitle = styled.h3`
 `
 export const defaultsText = styled.p`
+`
+export const pageTitle = styled.h1`
+    margin-left: calc(1rem + 2vw);
+`
+export const defaultUl = styled.ul`
+`
+export const defaultLi = styled.li`
 `

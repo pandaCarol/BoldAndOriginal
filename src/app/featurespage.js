@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Benefits, CaseExamples } from "../components/features";
 
 import feature from '../imgs/bg/feature.jpg';
+import { defaultSection } from "../css/cssDefault";
 
 const FeaturesContent = {
     backgroundImg: feature,
@@ -27,16 +28,17 @@ const FeaturesContent = {
     },
 }
 
-const FeaturesWrapper = styled.div`
-    display: grid;
-    height: 85vh;
+const FeaturesWrapper = styled(defaultSection)`
+    margin: calc(1rem + 5vh) 0;
+    display: flex;
+    position: relative;
     
     &&:before {
         position: absolute;
         z-index: -1;
         content: "";
         width: 100%;
-        height: 85%; 
+        height: 100%; 
         background-image: url(${props => props.img});
         background-repeat: no-repeat;
         background-size: cover;

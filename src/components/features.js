@@ -29,16 +29,17 @@ const Subtitle = styled(defaultsText)`
     }
 `
 //css for cases block 
-const CasesWrapper = styled.div`
+const CasesWrapper = styled(defaultSection)`
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
-    margin: auto 4vw;
+    margin: calc(1rem + 5vh) 4vw;
 `
 const ExampleWrapper = styled(defaultSection)`
     text-align: right;
     width: 24%;
     &:first-child {
-        margin-right: 54px;
+        margin-right: 3rem;
     }
 `
 const ExamplePercentage = styled(defaultTitle)`

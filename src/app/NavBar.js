@@ -5,19 +5,25 @@ import { NavigationBar } from "../components/navBtn";
 import styled from 'styled-components';
 import logoColor from '../imgs/logo/logoColor.png';
 
+import { defaultSection } from "../css/cssDefault";
+
 
 const HeaderWrapper = styled.header`
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 2;
     background-color: white;
 
     display: flex;
     padding: 12px 0; 
 `
-const NavWrapper = styled.section`
+const NavWrapper = styled(defaultSection)`
+    
     text-align: right;
+    flex-derection: row-reserve;
     width: 100%;
+    margin: 1rem 2rem;
 `
 const  NavContents = {
     icon: logoColor,

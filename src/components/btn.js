@@ -2,36 +2,44 @@ import styled from 'styled-components';
 
 import { defaultButton } from '../css/cssDefault'
 
-const LoginWrapper = styled.div`
-    margin: 6px 36px;
+export const LoginWrapper = styled.div`
+    display: ${props => props.display || 'block'};
+    flex-direction: row-reverse;
+    height: 3rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
 `
-const LoginBtn = styled(defaultButton)`
-    margin: 0 0 6px;
+export const LoginBtn = styled(defaultButton)`
+    margin: auto 1rem;
 
     @keyframes onHover {
         from {
-            height: 36px;
-            box-shadow: 0px 0px rgba(33, 33, 34, 1);
-            margin: 0 0 6px;
+            margin: 0 1rem;
+            height: 1.5rem;
+            box-shadow: 0 0 rgba(33, 33, 34, 1);
         }
-        to {
-            height: 42px;
-            box-shadow: 0px 6px rgba(33, 33, 34, 0.5);
-            margin: 0;
+        to {s
+            margin: auto 1rem;
+            height: 2.5rem;
+            box-shadow: 0px 0.375rem rgba(33, 33, 34, 0.5);
+            margin: 0 1rem;
         }
     }
 
     &:hover {
         cursor: pointer;
-        height: 42px;
-        margin: 0;
-        box-shadow: 0px 6px rgba(33, 33, 34, 0.5);
+        height: 2.5rem;
+        margin: auto 1rem;
+        box-shadow: 0px 0.375rem rgba(33, 33, 34, 0.5);
         animation: onHover 0.5s ease-out;
     }
 `
-export const ContactSale = ({ contents }) => {
+export const ContactSale = ({ contents, display }) => {
     return (
-        <LoginWrapper>
+        <LoginWrapper display={display}>
            <LoginBtn>{contents}</LoginBtn> 
         </LoginWrapper>  
     )

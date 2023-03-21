@@ -4,6 +4,7 @@ import { Content } from "../components/content";
 
 import bg from '../imgs/bg/bg.png';
 import { FormsComponents } from "../components/forms";
+import { defaultSection } from "../css/cssDefault";
 
 const HomeContent = {
     backgroundImg: bg,
@@ -11,29 +12,17 @@ const HomeContent = {
     subTitle: ['Google Ads campaign audits done and explained in human language that drives actions'],
 }
 
-const HomeWrapper = styled.div`
+const HomeWrapper = styled(defaultSection)`
     display: flex;
     height: 100vh;
-
-    &&:before {
-        position: absolute;
-        width: 80%;
-        height: 85%;
-        top: 10%;
-        z-index: -1;
-
-        content: "";
-        background-image: url(${props => props.img});
-        background-repeat: no-repeat;
-        background-size: 85% 100%;
-        opacity: 0.45;
-    }
+    scroll-margin-top: 7.75rem;
+    position: relative;
 `
 export const Homepage = () => {
 
     return (
         <HomeWrapper img={bg}>
-            <Content titles={HomeContent.title} subtitles={HomeContent.subTitle}/>
+            <Content titles={HomeContent.title} subtitles={HomeContent.subTitle} img={bg}/>
             <FormsComponents></FormsComponents>
         </HomeWrapper>
     )
