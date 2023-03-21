@@ -11,6 +11,7 @@ import { NavBar } from './app/NavBar';
 import { Homepage } from './app/Homepage';
 import { FeaturesPage } from './app/featurespage';
 import { Pricing } from './app/Pricing';
+import { About } from './app/About';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Homepage />
           <FeaturesPage />
           <Pricing />
+          <About />
         </main>
         
       </Container>
