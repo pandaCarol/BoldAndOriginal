@@ -9,7 +9,7 @@ import {
 
 import { NavBar } from './app/NavBar';
 import { Homepage } from './app/Homepage';
-import { FeaturesPage } from './app/featurespage';
+import { FeaturesPage } from './app/Featurespage';
 import { Pricing } from './app/Pricing';
 import { About } from './app/About';
 import { FAQ } from './app/FAQ';

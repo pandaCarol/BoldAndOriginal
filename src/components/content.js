@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { defaultSection, defaultTitle, defaultSubTitle, defaultsText } from '../css/cssDefault';
+import { defaultSection, defaultTitle, defaultsText } from '../css/cssDefault';
 
 const ContentWrapper = styled(defaultSection)`
     width: 70%;
@@ -30,23 +30,17 @@ const Subtitle = styled(defaultsText)`
     font-size: 20px;
 `
 
-export const Content = ({titles, subtitles, img}) => {
+export const Content = ({titles, subtitle, img}) => {
     const titleContents = titles.map((title, index) => {
         return (
             <Title key={index}>{title}</Title>
         )
     })
 
-    const subtitleContents = subtitles.map((sub, index) => {
-        return (
-            <Subtitle key={index}>{sub}</Subtitle>
-        )
-    })
-
     return (
         <ContentWrapper img={img}>
             {titleContents}
-            {subtitleContents}
+            <Subtitle>{subtitle}</Subtitle>
         </ContentWrapper>
     )
 }

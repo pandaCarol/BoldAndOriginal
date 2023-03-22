@@ -1,4 +1,88 @@
 {
+    "header": {
+        "btn": "Contact Sales",
+        "navbar": ["Why Bold & Original", "Solutions", "Pricing", "About"]
+    },
+
+    "home": {
+        "title": ["Stop Guessing.", "Turn Data Into Action."],
+        "subTitle": "Google Ads campaign audits done and explained in human language that drives actions"
+    },
+
+    "features": {
+        "benefits": {
+            "title": "Benefits of Action-Driven Audits:",
+            "subTitle": 
+                [
+                    "Data points connected with logic", 
+                    "More digestible insights", 
+                    "Allows actions to be taken right away"
+                ]
+        },
+        "cases": 
+            [
+                {
+                    "percentage": "20%",
+                    "title":"Data Analysis",
+                    "content": "\"With a higher quality score, you could get 20% higher CTR and 122 more Clicks.\""
+                },
+                {
+                    "percentage": "80%",
+                    "title": "Deeper Dive + Action Plan",
+                    "content": "\"You quality score is low due to low ad relevance; take the following action to improve CTR and Click...\""
+                }
+            ]
+    },
+
+    "pricing": {
+        "title": "Choose A Customized Service Based on Your Needs",
+        "packages": [
+            {
+                "productName": "Google Ads Audit",
+                "additionalInfo": "",
+                "users": "For experienced Google Ads users",
+                "price": "300",
+                "priceRange": "C$300 - C$1,000 depending on account size",
+                "contents": ["A comprehensive audit based on past 90 days’ data in PDF"]
+            },
+            {
+                "productName": "Google Ads Audit PLUS",
+                "additionalInfo": "Most Popular",
+                "users": "For new Google Ads users",
+                "price": "500",
+                "priceRange": "C$500 - C$1,200 depending on account size",
+                "contents": 
+                    [
+                        "A comprehensive audit based on past 90 days’ data in PDF", 
+                        "A 60min call (45min walk-through + 15min Q&A) on the same day of delivery"
+                    ]
+            }
+        ]
+    },
+
+    "solutions": {
+        "title": "Campaign Auditing with Simple, Seamless Delivery",
+        "subTitlesColumn": ["You", "Us", "Typical Workback"],
+        "steps": {
+            "Step1":{
+                "title": "Step1",
+                "ways": ["Share Marketing Goals", "", "1 Week"]
+            },
+            "Step2":{
+                "title": "Step2",
+                "ways": ["Grant Account Access", "", "1-3 Days"]
+            },
+            "Step3":{
+                "title": "Step3",
+                "ways": ["", "Start Campaign Auditing", "1-2 Weeks"]
+            },
+            "Step4":{
+                "title": "Step4",
+                "ways": ["", "Share Insights & Action Plan", "3-5 Days"]
+            }
+        }
+    },
+
     "founder": {
         "title": "Founder",
         "name": "Chengcheng MA",

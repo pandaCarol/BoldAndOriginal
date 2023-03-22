@@ -1,12 +1,15 @@
 import React from "react";
+import styled from 'styled-components';
+
 import { IconWrapper } from "../components/icon";
 import { ContactSale } from "../components/btn";
 import { NavigationBar } from "../components/navBtn";
-import styled from 'styled-components';
+
 import logoColor from '../imgs/logo/logoColor.png';
 
 import { defaultSection } from "../css/cssDefault";
 
+import pagesData from '../data/pagesData.json';
 
 const HeaderWrapper = styled.header`
     position: fixed;
@@ -25,21 +28,14 @@ const NavWrapper = styled(defaultSection)`
     width: 100%;
     margin: 1rem 2rem;
 `
-const  NavContents = {
-    icon: logoColor,
-    btn: 'Contact Sales',
-    navbar: ['Why Bold & Original', 'Solutions', 'Pricing', 'About'],
-
-}
 
 export const NavBar = () => {
-    console.log(NavContents)
     return (
         <HeaderWrapper>
-            <IconWrapper iconLink={NavContents.icon}/>
+            <IconWrapper iconLink={logoColor}/>
             <NavWrapper>
-                <ContactSale contents={NavContents.btn} />
-                <NavigationBar contents={NavContents.navbar} />
+                <ContactSale contents={pagesData.header.btn} />
+                <NavigationBar contents={pagesData.header.navbar} />
             </NavWrapper> 
         </HeaderWrapper>
         

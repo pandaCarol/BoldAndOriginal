@@ -51,13 +51,7 @@ const ExampleTitle = styled(defaultSubTitle)`
 const ExampleContent = styled(defaultsText)`
 `
 
-export const Benefits = ({titles, subtitles}) => {
-    const titleContents = titles.map((title, index) => {
-        return (
-            <Title key={index}>{title}</Title>
-        )
-    })
-
+export const Benefits = ({title, subtitles}) => {
     const subtitleContents = subtitles.map((sub, index) => {
         return (
             <Subtitle key={index} img={star}>
@@ -68,7 +62,7 @@ export const Benefits = ({titles, subtitles}) => {
 
     return (
         <BenefitsWrapper>
-            {titleContents}
+            <Title >{title}</Title>
             {subtitleContents}
         </BenefitsWrapper>
     )
