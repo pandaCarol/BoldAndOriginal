@@ -9,7 +9,7 @@ const AboutWrapper = styled(defaultSection)`
     backgournd-color: rgba(255, 255, 255, 0.6);
     display: flex;
     flex-direction: row;
-    margin: calc(1.5rem + 5vh) calc(1.5rem + 10vw);
+    margin: calc(1.5rem + 10vh) calc(1.5rem + 10vw) calc(1.5rem + 8vh);
 `
 
 export const About = () => {

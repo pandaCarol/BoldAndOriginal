@@ -34,7 +34,7 @@ const Wrapper = styled(defaultSection)`
 
         &&:before {
             content: '“';
-            top: calc(-1rem - 1vh);
+            top: calc(-0.5rem - 0.5vh);
         }
 
         &&:after {

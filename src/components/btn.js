@@ -21,7 +21,7 @@ export const LoginBtn = styled(defaultButton)`
             height: 1.5rem;
             box-shadow: 0 0 rgba(33, 33, 34, 1);
         }
-        to {s
+        to {
             margin: auto 1rem;
             height: 2.5rem;
             box-shadow: 0px 0.375rem rgba(33, 33, 34, 0.5);

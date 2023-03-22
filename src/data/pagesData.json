@@ -47,6 +47,25 @@
                 ]
             }
         ]
+    },
+
+    "footer": {
+        "title": "Bold And Original",
+        "contact": [
+            {
+                "icon": "home",
+                "details": "510 Curran Pl, Mississauga, ON, L5B 0J8"
+            },
+            {
+                "icon": "phone",
+                "details":"613-572-0423"
+            },
+            {
+                "icon": "email",
+                "details":"chengcheng.ma@boldandoriginal.com"
+            }
+        ]
+
     }
      
 }
