@@ -14,6 +14,7 @@ import { Pricing } from './app/Pricing';
 import { About } from './app/About';
 import { FAQ } from './app/FAQ';
 import { Footer } from './app/Footer';
+import { Solutions } from './app/Solutions';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <main>
           <Homepage />
           <FeaturesPage />
+          <Solutions />
           <Pricing />
           <About />
         </main>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FAQContent } from "../components/faq";
 import { defaultSection, defaultTitle } from "../css/cssDefault";
+
 import pagesData from '../data/pagesData.json'
 
 const FAQWrapper = styled(defaultSection)`

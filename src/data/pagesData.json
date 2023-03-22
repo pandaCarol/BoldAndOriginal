@@ -62,25 +62,26 @@
 
     "solutions": {
         "title": "Campaign Auditing with Simple, Seamless Delivery",
-        "subTitlesColumn": ["You", "Us", "Typical Workback"],
-        "steps": {
-            "Step1":{
-                "title": "Step1",
-                "ways": ["Share Marketing Goals", "", "1 Week"]
-            },
-            "Step2":{
-                "title": "Step2",
-                "ways": ["Grant Account Access", "", "1-3 Days"]
-            },
-            "Step3":{
-                "title": "Step3",
-                "ways": ["", "Start Campaign Auditing", "1-2 Weeks"]
-            },
-            "Step4":{
-                "title": "Step4",
-                "ways": ["", "Share Insights & Action Plan", "3-5 Days"]
-            }
-        }
+        "subTitlesColumn": ["", "You", "Us", "Typical Workback"],
+        "steps": 
+            [
+                {
+                    "title": "Step1",
+                    "ways": ["Share Marketing Goals", "", "1 Week"]
+                },
+                {
+                    "title": "Step2",
+                    "ways": ["Grant Account Access", "", "1-3 Days"]
+                },
+                {
+                    "title": "Step3",
+                    "ways": ["", "Start Campaign Auditing", "1-2 Weeks"]
+                },
+                {
+                    "title": "Step4",
+                    "ways": ["", "Share Insights & Action Plan", "3-5 Days"]
+                }
+            ]
     },
 
     "founder": {

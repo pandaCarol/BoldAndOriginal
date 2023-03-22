@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { defaultSection } from "../css/cssDefault";
+import { Founder, Introduction } from "../components/aboutFounder";
 
 import pagesData from '../data/pagesData.json';
-import { Founder, Introduction } from "../components/aboutFounder";
 
 const AboutWrapper = styled(defaultSection)`
     backgournd-color: rgba(255, 255, 255, 0.6);
