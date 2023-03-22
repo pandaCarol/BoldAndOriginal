@@ -1,24 +1,32 @@
 {
   "files": {
     "main.css": "/BoldAndOriginal/static/css/main.f342412b.css",
-    "main.js": "/BoldAndOriginal/static/js/main.198f7988.js",
+    "main.js": "/BoldAndOriginal/static/js/main.083d2872.js",
     "static/js/787.8f8ceedd.chunk.js": "/BoldAndOriginal/static/js/787.8f8ceedd.chunk.js",
     "static/media/bg.png": "/BoldAndOriginal/static/media/bg.774ec753d08d56bed347.png",
     "static/media/pricingBg.svg": "/BoldAndOriginal/static/media/pricingBg.ecb2be20005e9a7cd654fd53a3843b4f.svg",
     "static/media/founder.svg": "/BoldAndOriginal/static/media/founder.aa7237d348afae4239b8e47d813ffac5.svg",
     "static/media/feature.jpg": "/BoldAndOriginal/static/media/feature.402d0353cac5f98a382a.jpg",
     "static/media/logoColor.png": "/BoldAndOriginal/static/media/logoColor.d78a092ed7b2b0102406.png",
+    "static/media/faq.svg": "/BoldAndOriginal/static/media/faq.36b01c6e831929fa3c7e05b9ef523d57.svg",
+    "static/media/phone.svg": "/BoldAndOriginal/static/media/phone.4c9ab608ed471addfde7dc468adaaa55.svg",
     "static/media/star.svg": "/BoldAndOriginal/static/media/star.a4dc2033b8700ec19ffac59c655147b7.svg",
+    "static/media/linkedIn.svg": "/BoldAndOriginal/static/media/linkedIn.a75fa6ef72b7ad3872e729e23b197025.svg",
+    "static/media/linkedInHoverBlueGreen.svg": "/BoldAndOriginal/static/media/linkedInHoverBlueGreen.8bc71286da71f24fd796cee0ec21ebbc.svg",
+    "static/media/linkedInHover.svg": "/BoldAndOriginal/static/media/linkedInHover.b20aced7f55c82193caa7bf9d286276c.svg",
     "static/media/answer.svg": "/BoldAndOriginal/static/media/answer.b63cca7029a186df6daadfb27ad5be99.svg",
+    "static/media/email.svg": "/BoldAndOriginal/static/media/email.f6c8db441fdb0538f1181cc0cdd3d9ae.svg",
+    "static/media/emailHover.svg": "/BoldAndOriginal/static/media/emailHover.e42df97225325ef41cbe0fab39c7b9f6.svg",
+    "static/media/home.svg": "/BoldAndOriginal/static/media/home.533a8ce34815a1a6badae53d00099e68.svg",
     "index.html": "/BoldAndOriginal/index.html",
     "static/media/bgPricing300.svg": "/BoldAndOriginal/static/media/bgPricing300.c2b197936d7b2997bbac11f7e075f62f.svg",
     "static/media/bgPricing500.svg": "/BoldAndOriginal/static/media/bgPricing500.b094ceaac4884fe3135c7498e4c58aba.svg",
     "main.f342412b.css.map": "/BoldAndOriginal/static/css/main.f342412b.css.map",
-    "main.198f7988.js.map": "/BoldAndOriginal/static/js/main.198f7988.js.map",
+    "main.083d2872.js.map": "/BoldAndOriginal/static/js/main.083d2872.js.map",
     "787.8f8ceedd.chunk.js.map": "/BoldAndOriginal/static/js/787.8f8ceedd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f342412b.css",
-    "static/js/main.198f7988.js"
+    "static/js/main.083d2872.js"
   ]
 }
