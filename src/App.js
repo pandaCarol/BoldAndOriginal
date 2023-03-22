@@ -12,6 +12,7 @@ import { Homepage } from './app/Homepage';
 import { FeaturesPage } from './app/featurespage';
 import { Pricing } from './app/Pricing';
 import { About } from './app/About';
+import { FAQ } from './app/FAQ';
 
 
 
@@ -25,7 +26,7 @@ function App() {
           <Pricing />
           <About />
         </main>
-        
+        <FAQ />
       </Container>
   );
 }
