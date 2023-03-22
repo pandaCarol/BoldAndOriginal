@@ -17,8 +17,6 @@ const HomeWrapper = styled(defaultSection)`
     height: 100vh;
     scroll-margin-top: 7.75rem;
     position: relative;
-    top: 0;
-    z-index: 3;
 `
 export const Homepage = () => {
 
