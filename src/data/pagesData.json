@@ -1,4 +1,71 @@
 {
+    "forms": {
+        "onPage": {
+            "title": "Get First Free Consultation",
+            "subTitle": "Get in touch with your dedicated personal campaign inspector"
+        },
+        "leadForms": {
+            "title": "Get in touch with your dedicated personal campaign inspector",
+            "packageInfo": [
+                {
+                    "title": "Google Ads Audit",
+                    "details": [
+                        "For experienced Google Ads users",
+                        "From C$300, de pending on account size",
+                        "(C$300 - C$1,000)",
+                        "A comprehensive audit based on past 90 days' data in PDF"
+                    ]
+                },
+                {
+                    "title": "Google Ads Audit Plus",
+                    "details": [
+                        "For new Google Ads users",
+                        "From C$500, depending on account size",
+                        "(C$500 - C$1,200)",
+                        "A comprehensive audit based on past 90 days' data in PDF",
+                        "A 60min call (45min walk-through + 15min Q&A) on the same day of delivery"
+                    ]
+                }
+            ]
+        },
+        "clientsInfo": {
+            "title": {
+                "onPage": "About You",
+                "leadForms": "Contact Information"
+            },
+            "infos": ["First Name", "Last Name", "Email Address", "Phone Number"]
+        },
+        "clientsNeeds": {
+            "title": "How can we help",
+            "hasAds": {
+                "question": "Do you have active Google Ads campaigns?",
+                "Answer": ["Yes", "No"]
+            },
+            "webURL": {
+                "question": "Your website URL:",
+                "placeholder": "e.g.  http://...."
+            },
+            "painPoint:": {
+                "question": "Your biggest campaign pain point:",
+                "placeholder": "Maximums 300 characters are allowed",
+                "remainingWords": "Characters left: "
+            }
+        },
+        "package": {
+            "title": "Which package you are most interesting",
+            "radio": [
+                "Google Ads Audit",
+                "Google Ads Audit Plus",
+                "I have no idea"
+            ]
+        },                    
+        "confirm": [
+            "Thanks for contacting us!",
+            "Your submission is received and we will contact you soon"      
+        ]
+    },
+
+
     "header": {
         "btn": "Contact Sales",
         "navbar": ["Why Bold & Original", "Solutions", "Pricing", "About"]
