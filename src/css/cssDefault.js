@@ -52,3 +52,14 @@ export const defaultUl = styled.ul`
 `
 export const defaultLi = styled.li`
 `
+export const defaultForm = styled.form`
+    border: 3px solid rgba(224, 220, 217, 0.5);
+    border-radius: 0.75rem;
+    margin: 0 calc(0.1rem + 1vw);
+    padding: 0.5rem 1rem;
+
+    div {
+        text-align: left;
+    }
+
+`

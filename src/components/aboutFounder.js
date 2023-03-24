@@ -6,9 +6,14 @@ import founder from '../imgs/pic/founder.svg';
 
 const Title = styled(defaultTitle)`
     text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 0;
 `
 const FounderName = styled(defaultSubTitle)`
     text-align: center;
+    margin-bottom: 0;
+    font-weight: 500;
 `
 const Wrapper = styled(defaultSection)`
     @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
@@ -24,6 +29,7 @@ const Wrapper = styled(defaultSection)`
         padding: 1rem calc(1.5rem + 10vw);
         text-align: justify;
         position: relative;
+        margin-left: 0;
 
         &&:before, &&:after {
             position: absolute;
@@ -44,6 +50,7 @@ const Wrapper = styled(defaultSection)`
     }
 `
 const IntroContent = styled(defaultsText)`
+
 `
 const ProfilePic = styled.div`
     margin: calc(0.5rem + 1vh) auto;
@@ -58,9 +65,9 @@ const ProfilePic = styled.div`
 export const Founder = ({item}) => {
     return (
         <Wrapper className="founder">
-            <Title>{item.title}</Title>
             <ProfilePic className="profilePic"></ProfilePic>
             <FounderName>{item.name}</FounderName>
+            <Title>{item.title}</Title>
         </Wrapper>
     )
 }

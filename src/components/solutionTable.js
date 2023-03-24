@@ -86,17 +86,17 @@ const Wrapper = styled(defaultSection)`
     }
 
     .Step1 {
-        background-color: rgba(0,124,151, 0.25);
+        background-color: rgba(206, 157, 133, 0.25);
         border-radius: 0.5rem 0 0 0;
     };
     .Step2 {
-        background-color: rgba(0,124,151, 0.45);
+        background-color: rgba(206, 157, 133, 0.45);
     };
     .Step3 {
-        background-color: rgba(0,124,151, 0.65);
+        background-color: rgba(206, 157, 133, 0.65);
     };
     .Step4 {
-        background-color: rgba(0,124,151, 0.85);
+        background-color: rgba(206, 157, 133, 0.85);
         border-radius:  0 0 0 0.5rem;
     };
 `

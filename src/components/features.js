@@ -43,8 +43,9 @@ const ExampleWrapper = styled(defaultSection)`
     }
 `
 const ExamplePercentage = styled(defaultTitle)`
-    color: ${props => props.className === '20%' ? '#EBD134' : '#007C97'};
-    
+    color: ${props => props.className === '20%' ? '#CE9D85B2' : '#007C97'};
+    margin-block-end: 0.5rem;
+    font-size: ${props => props.className === '20%' ? '5rem' : '7rem'};
 `
 const ExampleTitle = styled(defaultSubTitle)`
 `
