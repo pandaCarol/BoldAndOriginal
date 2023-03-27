@@ -1,11 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { defaultTitle } from "../../css/cssDefault";
+import { defaultTitle, FormDivs, FormInputs, FormReminder, FormTitles, IconsDropdown } from "../../css/cssDefault";
+import { getPattern } from "../../functions/getPattern";
 import { stringRemoveSpaceFirstLetterLowercase } from "../../functions/stringFormat";
 
 
-const TitleWrapper = styled(defaultTitle)`
+const TitleWrapper = styled(FormTitles)`
 `
+const FormDiv = styled(FormDivs)`
+`
+const Reminder = styled(FormReminder)`
+`
+const FormInput = styled(FormInputs)`
+`
+const DropdownIcon = styled(IconsDropdown)`
+`
+
 export const FormsTitle = ({ className, children }) => {
     return (
         <TitleWrapper className={className}>
@@ -14,18 +24,22 @@ export const FormsTitle = ({ className, children }) => {
     )
 }
 
-export const FormsInput = ({ inputType, fieldName, register, errors, placeHolder, isRequired, maximLength, minimLength }) => {
+export const FormsInput = ({ inputType, fieldName, register, reminder, errors, placeHolder, isRequired, patternReminder, maximLength, minimLength }) => {
 
     return (
-        <div className={stringRemoveSpaceFirstLetterLowercase(fieldName)}>
-            <input 
+        <FormDiv className={stringRemoveSpaceFirstLetterLowercase(fieldName)}>
+            <FormInput 
                 type={inputType} 
                 id={fieldName} 
                 placeholder={placeHolder} 
                 {...register(fieldName, {
                     required: {
                         value: isRequired,
-                        message: "This is required"
+                        message: reminder
+                    },
+                    pattern: {
+                        value: getPattern(fieldName),
+                        message: patternReminder
                     },
                     maximLength: {
                         value: maximLength,
@@ -33,15 +47,18 @@ export const FormsInput = ({ inputType, fieldName, register, errors, placeHolder
                     },
                     minLength: {
                         value: minimLength,
-                        message: `must be maximum ${minimLength}`
+                        message: `must be minimum ${minimLength}`
                     }
                 })}
             />
 
-            <p>{errors[fieldName] && errors[fieldName].message}</p>
-        </div>
+            <Reminder>{errors[fieldName] && errors[fieldName].message}</Reminder>
+        </FormDiv>
     )
 }
 
+export const IconDropDown = ({iconOnClick}) => {
+    return <DropdownIcon className="dropDown" onClick={iconOnClick}></DropdownIcon>
+}
 
 

@@ -9,7 +9,7 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 16px;
 
-    & button, h1, h2, h3, p, ul, li {
+    & button, h1, h2, h3, p, ul, li, input {
         font-family: 'Alata', sans-serif;
         box-sizing: border-box;
     }
@@ -56,10 +56,68 @@ export const defaultForm = styled.form`
     border: 3px solid rgba(224, 220, 217, 0.5);
     border-radius: 0.75rem;
     margin: 0 calc(0.1rem + 1vw);
-    padding: 0.5rem 1rem;
 
     div {
         text-align: left;
     }
 
+`
+
+/* CSS Forms */
+export const FormTitles = styled.h2`
+    margin-block: 0;
+    border-radius: 0.55rem 0.55rem 0 0;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-align: left;
+    color: #555B70;
+    position: relative;
+`
+export const FormDivs = styled.div`
+    padding: calc(0.3rem + 1vh) 3rem;
+    position: relative;
+
+    ::before{
+        position: absolute;
+        content: '';
+        background-repeat: no;
+        background-size: contain;
+        width: 1.25rem;
+        height: 1.25rem;
+        top: calc(0.5rem + 1vh);
+        left: 1rem;
+    }
+`
+export const FormInputs = styled.input`
+   border: none;
+   font-size: 1rem;
+   border-bottom: 2px solid rgba(85, 91, 112, 0.5);
+   width: 100%;
+
+   :focus {
+        outline: 1px solid rgba(224, 220, 217, 0.25);
+        background-color: rgba(224, 220, 217, 0.25);
+   }
+`
+
+export const FormReminder = styled.p`
+    margin-block: 0;
+    color: red;
+    font-size: 0.75rem;
+`
+export const IconsDropdown = styled.div`
+    position: absolute;
+    content: '';
+    background-repeat: no;
+    background-size: contain;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: 0.65rem;
+    right: 1.5rem;
+
+    :hover {
+        cursor: pointer;
+        top: 0.5rem;
+    }
 `

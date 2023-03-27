@@ -22,13 +22,15 @@ const FormsWrapper = styled(defaultSection)`
 const StyledTitle = styled(FormsTitle)`
     font-size: 1.25rem;
     font-weight: 500;
+    text-align: center;
 `
 
 
 const StyledSubTitle = styled(FormsTitle)`
     font-size: 1rem;
     font-weight: 400;
-    margin-block: calc(1rem + 1vh);
+    margin-block calc(0.5rem + 0.5vh);
+    text-align: center;
 `
 
 export const FormsComponents = () => {

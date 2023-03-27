@@ -33,7 +33,34 @@
                 "onPage": "About You",
                 "leadForms": "Contact Information"
             },
-            "infos": ["First Name", "Last Name", "Email Address", "Phone Number"]
+            "infos": [
+                {
+                    "content": "First Name",
+                    "ErrMes": "Please enter your first name",
+                    "pattern": "/^[A-Za-z]{2,20}$/i",
+                    "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20"
+                },
+                {
+                    "content": "Last Name",
+                    "ErrMes": "Please enter your last name",
+                    "pattern": "/^[A-Za-z]{2,20}$/i",
+                    "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20"
+                },
+                {
+                    "content": "Email Address",
+                    "ErrMes": "Email Address is required",
+                    "reminder": "Please check your email to confirm this email address, we will contact you by this email address",
+                    "pattern": "/^[a-z\\d]+(\\.[a-z\\d]+)*@([\\da-z](-[\\da-z])?)+(\\.{1,2}[a-z]+)+$/",
+                    "patternReminder": "An email address must contain a single @"
+                },
+                {
+                    "content": "Phone Number",
+                    "ErrMes": "Please enter your phone number",
+                    "pattern": "/^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$/",
+                    "patternReminder": "Please check your phone number"
+                } 
+                
+            ]
         },
         "clientsNeeds": {
             "title": "How can we help",
