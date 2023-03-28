@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { defaultSection } from "../../css/cssDefault";
 
-import { FormsTitle } from "./FormSubcomponents";
+import { FormsTitle, IconSubmit } from "./FormSubcomponents";
 
 import pagesData from "../../data/pagesData.json";
 import { UserForm } from "./userInfo";
+import { PainPointsForm } from "./painPointsForm";
 
 const Wrapper = styled.div`
     height: 100%;
@@ -32,14 +33,19 @@ const StyledSubTitle = styled(FormsTitle)`
     margin-block calc(0.5rem + 0.5vh);
     text-align: center;
 `
+const StyledSubmit = styled(IconSubmit)`
+`
 
 export const FormsComponents = () => {
+
     return (
         <FormsWrapper>
             <Wrapper>
                 <StyledTitle className="title">{pagesData.forms.onPage.title}</StyledTitle>
                 <StyledSubTitle className="subtitle">{pagesData.forms.onPage.subTitle}</StyledSubTitle>
                 <UserForm />
+                <PainPointsForm />
+                <StyledSubmit content='Submit' />
             </Wrapper>
         </FormsWrapper>
     )

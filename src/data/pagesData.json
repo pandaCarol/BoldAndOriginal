@@ -37,26 +37,22 @@
                 {
                     "content": "First Name",
                     "ErrMes": "Please enter your first name",
-                    "pattern": "/^[A-Za-z]{2,20}$/i",
                     "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20"
                 },
                 {
                     "content": "Last Name",
                     "ErrMes": "Please enter your last name",
-                    "pattern": "/^[A-Za-z]{2,20}$/i",
                     "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20"
                 },
                 {
                     "content": "Email Address",
                     "ErrMes": "Email Address is required",
                     "reminder": "Please check your email to confirm this email address, we will contact you by this email address",
-                    "pattern": "/^[a-z\\d]+(\\.[a-z\\d]+)*@([\\da-z](-[\\da-z])?)+(\\.{1,2}[a-z]+)+$/",
-                    "patternReminder": "An email address must contain a single @"
+                    "patternReminder": "Please entre a valid email address"
                 },
                 {
                     "content": "Phone Number",
                     "ErrMes": "Please enter your phone number",
-                    "pattern": "/^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$/",
                     "patternReminder": "Please check your phone number"
                 } 
                 
@@ -65,16 +61,25 @@
         "clientsNeeds": {
             "title": "How can we help",
             "hasAds": {
+                "id": "hasAds",
                 "question": "Do you have active Google Ads campaigns?",
-                "Answer": ["Yes", "No"]
+                "Answer": ["Yes", "No"],
+                "ErrMes": "You have to choose one above.",
+                "patternReminder": ""
             },
             "webURL": {
+                "id":  "webURL",
                 "question": "Your website URL:",
-                "placeholder": "e.g.  http://...."
+                "placeholder": "e.g.  http://....",
+                "ErrMes": "",
+                "patternReminder": ""
             },
-            "painPoint:": {
+            "painPoint": {
+                "id": "painPoint",
                 "question": "Your biggest campaign pain point:",
                 "placeholder": "Maximums 300 characters are allowed",
+                "ErrMes": "Please enter at least one pain point",
+                "patternReminder": "",
                 "remainingWords": "Characters left: "
             }
         },

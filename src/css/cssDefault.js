@@ -9,7 +9,7 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 16px;
 
-    & button, h1, h2, h3, p, ul, li, input {
+    & button, h1, h2, h3, p, ul, li, input, label {
         font-family: 'Alata', sans-serif;
         box-sizing: border-box;
     }
@@ -120,4 +120,6 @@ export const IconsDropdown = styled.div`
         cursor: pointer;
         top: 0.5rem;
     }
+`
+export const FormLabel = styled.label`
 `

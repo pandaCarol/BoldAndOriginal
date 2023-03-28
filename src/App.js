@@ -30,7 +30,6 @@ function App() {
           <About />
         </main>
         <Footer />
-        <FAQ />
       </Container>
   );
 }

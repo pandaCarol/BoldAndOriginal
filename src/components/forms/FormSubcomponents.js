@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { defaultTitle, FormDivs, FormInputs, FormReminder, FormTitles, IconsDropdown } from "../../css/cssDefault";
+import { defaultButton, defaultTitle, FormDivs, FormInputs, FormLabel, FormReminder, FormTitles, IconsDropdown } from "../../css/cssDefault";
 import { getPattern } from "../../functions/getPattern";
 import { stringRemoveSpaceFirstLetterLowercase } from "../../functions/stringFormat";
 
@@ -15,6 +15,8 @@ const FormInput = styled(FormInputs)`
 `
 const DropdownIcon = styled(IconsDropdown)`
 `
+const SubmitButton = styled(defaultButton)`
+`
 
 export const FormsTitle = ({ className, children }) => {
     return (
@@ -24,13 +26,13 @@ export const FormsTitle = ({ className, children }) => {
     )
 }
 
-export const FormsInput = ({ inputType, fieldName, register, reminder, errors, placeHolder, isRequired, patternReminder, maximLength, minimLength }) => {
+export const FormsInput = ({ inputType, fieldName, label, register, reminder, errors, placeHolder, isRequired, patternReminder, maximLength, minimLength }) => {
 
     return (
         <FormDiv className={stringRemoveSpaceFirstLetterLowercase(fieldName)}>
+            <FormLabel >{label}</FormLabel>
             <FormInput 
-                type={inputType} 
-                id={fieldName} 
+                type={inputType}
                 placeholder={placeHolder} 
                 {...register(fieldName, {
                     required: {
@@ -61,4 +63,12 @@ export const IconDropDown = ({iconOnClick}) => {
     return <DropdownIcon className="dropDown" onClick={iconOnClick}></DropdownIcon>
 }
 
+export const IconSubmit = ({content, onClick}) => {
+    return (
+        <SubmitButton onClick={onClick}>{content}</SubmitButton>
+    )
+}
 
+export const FormsRadio = () => {
+    
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { defaultSection, defaultSubTitle, defaultUl, defaultLi } from "../css/cssDefault";
 
@@ -6,10 +6,14 @@ import linkedIn from '../imgs/icon/linkedIn.svg';
 import linkedInHover from '../imgs/icon/linkedInHover.svg';
 import linkedInHoverBlueGreen from '../imgs/icon/linkedInHoverBlueGreen.svg';
 import faq from '../imgs/icon/faq.svg';
+import faqHover from '../imgs/icon/faqHover.svg';
+import faqHover2 from '../imgs/icon/faqHover2.svg';
 import email from '../imgs/icon/email.svg';
 import emailHover from '../imgs/icon/emailHover.svg';
 import home from '../imgs/icon/home.svg';
 import phone from '../imgs/icon/phone.svg';
+import { ToggleUseContext } from "../app/FAQ";
+import { UseToggleHandel } from "./hooks";
 const icons = [home, phone, email];
 
 const TitleWrapper = styled(defaultSection)`
@@ -75,7 +79,7 @@ const ContactWrapper = styled(defaultUl)`
     list-style-type: none;
     position: relative;
 
-    &:before {
+    .iconFAQ {
         content: '';
         position: absolute;
         height: 60%;
@@ -85,6 +89,15 @@ const ContactWrapper = styled(defaultUl)`
         background-size: contain;
         left: calc(-1rem - 20%);
         top: 12.5%;
+
+        :hover {
+            cursor: pointer;
+            background-image: url(${faqHover2});
+            height: 65%;
+            width: 65%;
+            left: calc(-1rem - 21%);
+            top: 11%;
+        }
     }
 `
 
@@ -116,13 +129,16 @@ export const Title = ({ title }) => {
 }
 
 export const Contact = ({lists}) => {
+    const toggle = UseToggleHandel();
     const contactDetails = lists.map( (list, index) => {
         return (
             <ContactInfo key={list.icon} className={list.icon} bullets={icons[index]}>{list.details}</ContactInfo>
         )
     })
+
     return (
         <ContactWrapper>
+            <div className="iconFAQ" onClick={toggle}></div>
             {contactDetails}
         </ContactWrapper>
     )

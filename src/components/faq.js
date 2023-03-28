@@ -34,6 +34,8 @@ const AnswerWrapper = styled.div`
 `
 const Wrapper = styled.div`
     height: 50vh;
+    width: 75%;
+    margin: 0 auto;
     overlay: hidden;
 `
 
