@@ -21,12 +21,13 @@ const Wrapper = styled(defaultSection)`
     &&.founder {
         width: 45%;
         align-items: center;
-        margin: auto 0;
+        margin: 0;
+        display: grid;
     }
     
     &&.intro {
         width: 55%;
-        padding: 1rem calc(1.5rem + 10vw);
+        padding: 1rem 1.5 rem 1 rem calc(1.5rem + 5vw);
         text-align: justify;
         position: relative;
         margin-left: 0;
@@ -45,7 +46,7 @@ const Wrapper = styled(defaultSection)`
 
         &&:after {
             content: '”';
-            bottom: calc(-1rem - 1vh);
+            bottom: calc(-1rem - 2vh);
         }
     }
 `
@@ -66,8 +67,10 @@ export const Founder = ({item}) => {
     return (
         <Wrapper className="founder">
             <ProfilePic className="profilePic"></ProfilePic>
-            <FounderName>{item.name}</FounderName>
-            <Title>{item.title}</Title>
+            <div className="founderContentWrapper">
+                <FounderName>{item.name}</FounderName>
+                <Title>{item.title}</Title>
+            </div>
         </Wrapper>
     )
 }
