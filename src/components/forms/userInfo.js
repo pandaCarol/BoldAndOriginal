@@ -5,6 +5,7 @@ import { FormsInput, FormsTitle, IconDropDown } from "./FormSubcomponents";
 import pagesData from '../../data/pagesData.json';
 import styled from "styled-components";
 import { defaultForm } from "../../css/cssDefault";
+import { UseFormHiddenState, UseFormToggleHandel, UsecontextSubmit, SubmitContents } from "../hooks";
 
 import user from '../../imgs/forms/user.svg';
 import email from '../../imgs/forms/email.svg';
@@ -13,10 +14,15 @@ import dropDown from '../../imgs/forms/dropDown.svg';
 import dropDownHover from '../../imgs/forms/dropDownHover.svg';
 import goUpHover from '../../imgs/forms/goUpHover.svg';
 import goUp from '../../imgs/forms/goUp.svg';
+import valid from '../../imgs/forms/valid.svg';
+
+import { validedSubmit } from "../../functions/validedSubmit";
 
 
 const StyledTitle = styled(FormsTitle)`
     background-color: #EBD134;
+    
+    border-radius: ${props => props.isHidden ? "0.55rem" : "0.55rem 0.55rem 0 0"}
 `
 const StyledForm = styled(FormsInput)`
     display: none;
@@ -24,6 +30,22 @@ const StyledForm = styled(FormsInput)`
 
 const StyledFormWrapper = styled(defaultForm)`
     position: relative;
+    h2 {
+        color: ${props => props.validStatus === -1 ? "red": "#555B70"}
+    }
+
+    .validIcon {
+        display:  ${props => props.validStatus === 1 ? "block": "none"};
+        position: absolute;
+        content: '';
+        background-repeat: no;
+        background-size: contain;
+        width: 1.25rem;
+        height: 1.25rem;
+        top: 0.8rem;
+        right: 35%;
+        background-image: url(${valid});
+    }
 
     .dropDown {
         background-image: url(${props => props.isHidden ? dropDown: goUp});
@@ -51,27 +73,21 @@ const Div = styled.div`
     display: ${props => props.tobeHidden ? "none" : "block"};
 `
 
-export const UserForm = () => {
-    const [isHidden, setIsHidden] = useState(true);
-    const { register, handleSubmit, formState: { errors } } = useForm();
+export const UserForm = ({ register, errors, isSubmit }) => {
+    const toggle = UseFormToggleHandel();
+    const hiddenState = UseFormHiddenState();
 
-    function handelOnClick() {
-        setIsHidden(previous => !previous);
-    }
-
-    const onSubmit = (data) => {
-        console.log(data);
-    }
-
+    
+    const fieldName = [];
     const infosForm = pagesData.forms.clientsInfo.infos.map(item => {
-
+        fieldName.push(item.content);
         return (
             <StyledForm key={item.content}
-                type = "text"
+                type = {item.type}
                 fieldName={item.content}
                 placeHolder = {item.content}
                 reminder = {item.ErrMes}
-                register = {register}
+                register = { register }
                 patternReminder = { item.patternReminder }
                 errors = { errors }
                 isRequired = {true}
@@ -80,12 +96,17 @@ export const UserForm = () => {
         )
     })
 
+    const errorsArray = Object.keys(errors);
+    const validStatus = validedSubmit(isSubmit, errorsArray, fieldName);
+
     return (
-        <StyledFormWrapper onSubmit={handleSubmit(onSubmit)} isHidden={isHidden}>
-            <StyledTitle className='aboutYou' >{pagesData.forms.clientsInfo.title.onPage}</StyledTitle>
-            <IconDropDown iconOnClick={handelOnClick}/>
-            <Div className="inputForms" tobeHidden={isHidden}>{infosForm}</Div>
-            <input type="submit" value="Submit"/>
+        <StyledFormWrapper isHidden={hiddenState} validStatus={validStatus}>
+            <StyledTitle className='aboutYou' isHidden={hiddenState} >
+                {pagesData.forms.clientsInfo.title.onPage}
+            </StyledTitle>
+            <div className='validIcon' />
+            <IconDropDown onClick={toggle}/>
+            <Div className="inputForms" tobeHidden={hiddenState}>{infosForm}</Div>
         </StyledFormWrapper>
     )
 }

@@ -9,7 +9,7 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 16px;
 
-    & button, h1, h2, h3, p, ul, li, input, label {
+    & button, h1, h2, h3, p, ul, li, input, label, textarea {
         font-family: 'Alata', sans-serif;
         box-sizing: border-box;
     }
@@ -52,10 +52,10 @@ export const defaultUl = styled.ul`
 `
 export const defaultLi = styled.li`
 `
-export const defaultForm = styled.form`
+export const defaultForm = styled.div`
     border: 3px solid rgba(224, 220, 217, 0.5);
     border-radius: 0.75rem;
-    margin: 0 calc(0.1rem + 1vw);
+    margin: 1rem calc(0.1rem + 1vw);
 
     div {
         text-align: left;
@@ -66,7 +66,6 @@ export const defaultForm = styled.form`
 /* CSS Forms */
 export const FormTitles = styled.h2`
     margin-block: 0;
-    border-radius: 0.55rem 0.55rem 0 0;
     padding: 0.5rem 1rem;
     font-weight: 400;
     font-size: 1.15rem;
@@ -122,4 +121,11 @@ export const IconsDropdown = styled.div`
     }
 `
 export const FormLabel = styled.label`
+    font-size: 1rem;
+    color: rgb(85, 91, 112);
+`
+
+export const FormTextarea = styled.textarea`
+    font-size: 1rem;
+    color: rgb(85, 91, 112);
 `

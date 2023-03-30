@@ -37,23 +37,27 @@
                 {
                     "content": "First Name",
                     "ErrMes": "Please enter your first name",
-                    "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20"
+                    "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20",
+                    "type": "text"
                 },
                 {
                     "content": "Last Name",
                     "ErrMes": "Please enter your last name",
-                    "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20"
+                    "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20",
+                    "type": "text"
                 },
                 {
                     "content": "Email Address",
                     "ErrMes": "Email Address is required",
                     "reminder": "Please check your email to confirm this email address, we will contact you by this email address",
-                    "patternReminder": "Please entre a valid email address"
+                    "patternReminder": "Please entre a valid email address",
+                    "type": "email"
                 },
                 {
                     "content": "Phone Number",
                     "ErrMes": "Please enter your phone number",
-                    "patternReminder": "Please check your phone number"
+                    "patternReminder": "Please check your phone number",
+                    "type": "tel"
                 } 
                 
             ]
@@ -63,25 +67,34 @@
             "hasAds": {
                 "id": "hasAds",
                 "question": "Do you have active Google Ads campaigns?",
-                "Answer": ["Yes", "No"],
+                "answer": ["Yes", "No"],
                 "ErrMes": "You have to choose one above.",
-                "patternReminder": ""
+                "patternReminder": "You have to choose one above.",
+                "type": "radio"
+
             },
             "webURL": {
                 "id":  "webURL",
                 "question": "Your website URL:",
                 "placeholder": "e.g.  http://....",
                 "ErrMes": "",
-                "patternReminder": ""
+                "patternReminder": "",
+                "type": "url"
             },
             "painPoint": {
                 "id": "painPoint",
                 "question": "Your biggest campaign pain point:",
                 "placeholder": "Maximums 300 characters are allowed",
                 "ErrMes": "Please enter at least one pain point",
-                "patternReminder": "",
-                "remainingWords": "Characters left: "
+                "patternReminder": "The contents should between 3 to 300 characters",
+                "remainingWords": "Characters left: ",
+                "type": "text"
             }
+        },
+        "dataProtocol": {
+            "id": "protocol",
+            "content": ["I agree to Bold And Original' Terms and Conditions and Privacy Policy."],
+            "type": "checkbox"
         },
         "package": {
             "title": "Which package you are most interesting",
