@@ -18,9 +18,9 @@ const DropdownIcon = styled(IconsDropdown)`
 const SubmitButton = styled(defaultButton)`
 `
 
-export const FormsTitle = ({ className, children }) => {
+export const FormsTitle = ({ className, children, onClick}) => {
     return (
-        <TitleWrapper className={className}>
+        <TitleWrapper className={className} onClick={onClick}>
             {children}
         </TitleWrapper>
     )

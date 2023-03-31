@@ -86,7 +86,7 @@
                 "question": "Your biggest campaign pain point:",
                 "placeholder": "Maximums 300 characters are allowed",
                 "ErrMes": "Please enter at least one pain point",
-                "patternReminder": "The contents should between 3 to 300 characters",
+                "patternReminder": "The contents should between 20 to 300 characters",
                 "remainingWords": "Characters left: ",
                 "type": "text"
             }

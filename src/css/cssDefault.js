@@ -102,7 +102,7 @@ export const FormInputs = styled.input`
 
 export const FormReminder = styled.p`
     margin-block: 0;
-    color: red;
+    color: #e91640;
     font-size: 0.75rem;
 `
 export const IconsDropdown = styled.div`

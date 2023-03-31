@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
 import { defaultSection } from "../../css/cssDefault";
@@ -8,23 +8,29 @@ import { FormsTitle, IconSubmit } from "./FormSubcomponents";
 import pagesData from "../../data/pagesData.json";
 import { UserForm } from "./userInfo";
 import { PainPointsForm } from "./painPointsForm";
-import { FormSubmitProviders, HiddenWrapper, SubmitContents, UsecontextSubmit } from "../hooks";
+import { HiddenWrapper } from "../hooks";
 import { useState } from "react";
 import { Checkbox } from "./checkboxProtocol";
+import { ConfirmInfo } from "./submittedConfirm";
 
 const Wrapper = styled.div`
     height: 100%;
     margin: calc(3rem + 1vh) calc(1rem + 1vw) 0;
     text-align: center;
 
+    .confirmInfo {
+        display: ${props => props.submitted ? 'block' : 'none'};
+    }
+
     .formSubmit {
         width: 50%;
         border: 3px solid rgba(224, 220, 217, 1);
         margin-top: calc(1rem + 1vh);
+        color:  ${props => props.submitted ? "gray" : "black"};
         :hover {
-            cursor: pointer;
-            border: none;
-            text-transform: uppercase;
+            cursor: ${props => props.submitted ? "default" : "pointer"};
+            border: ${props => props.submitted ? "3px solid rgba(224, 220, 217, 1)" : "none"};
+            text-transform: ${props => props.submitted ? "none" : "uppercase"};
         }
     }
 
@@ -33,6 +39,7 @@ const Wrapper = styled.div`
     }
 
     .checkbox {
+        display: ${props => props.submitted ? "none" : "block"};
         text-align: left;
         width: 100%;
         div {
@@ -62,47 +69,61 @@ const FormsWrapper = styled(defaultSection)`
     height: 85%;
     align-self: flex-end;
     background-color: white;
+    overflow-Y: scroll;
 `
 const StyledTitle = styled(FormsTitle)`
     font-size: 1.25rem;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
+    color: rgb(0,0,0);
+    margin: 0 0.5vw;
 `
-
 
 const StyledSubTitle = styled(FormsTitle)`
     font-size: 1rem;
     font-weight: 400;
     margin-block calc(0.5rem + 0.5vh);
-    text-align: center;
+    text-align: left;
+    margin: 0 0.5vw;
 `
 const StyledSubmit = styled(IconSubmit)`
 `
 
 export const FormsComponents = () => {
-    const [doseSubmit, setSubmit] = useState(false);
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [doseSubmit, setSubmit] = useState(false)
+    const [submitted, setSubmitted] = useState(false)
+    const { register, handleSubmit, formState: { errors } } = useForm()
 
     function onSubmit(data) {
-        console.log(data);
+        if (!submitted) {
+            console.log(data);
+            setSubmitted(true);
+        }
     }
 
     function handelOnClick() {
         setSubmit(true);
     }
 
+    useEffect(() => {
+        setTimeout(()=>{
+            setSubmit(false)
+        }, 5000)
+    }, [doseSubmit])
+
     return (
         <FormsWrapper>
-            <Wrapper>
+            <Wrapper submitted={submitted}>
                 <StyledTitle className="title">{pagesData.forms.onPage.title}</StyledTitle>
                 <StyledSubTitle className="subtitle">{pagesData.forms.onPage.subTitle}</StyledSubTitle>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <HiddenWrapper>
                         <div className="inputForms">
-                            <UserForm register={register} errors={errors} isSubmit={doseSubmit}/>
-                            <PainPointsForm register={register} errors={errors} isSubmit={doseSubmit}/>
-                            <Checkbox register={register} errors={errors} isSubmit={doseSubmit}/>
-                            <StyledSubmit className="formSubmit" content='Submit' onClick={handelOnClick}/>
+                            <UserForm register={register} errors={errors} isSubmit={doseSubmit} submitted={submitted}/>
+                            <PainPointsForm register={register} errors={errors} isSubmit={doseSubmit} submitted={submitted}/>
+                            <Checkbox register={register} errors={errors} isSubmit={doseSubmit} />
+                            <ConfirmInfo className="confirmInfo" contents={pagesData.forms.confirm} confirm={submitted}/>
+                            <StyledSubmit className="formSubmit" content='Submit' onClick={handelOnClick} />
                         </div>
                     </HiddenWrapper>
                 </form>
