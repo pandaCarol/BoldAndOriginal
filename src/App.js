@@ -1,10 +1,11 @@
 import './App.css';
+import React from 'react';
 import { Container } from './css/cssDefault';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
+  Routes,
 } from 'react-router-dom';
 
 import { NavBar } from './app/NavBar';
@@ -20,7 +21,7 @@ import { Solutions } from './app/Solutions';
 
 function App() {
   return (
-      <Container>
+    <Container>
         <NavBar />
         <main>
           <Homepage />
@@ -30,7 +31,7 @@ function App() {
           <About />
         </main>
         <Footer />
-      </Container>
+    </Container>
   );
 }
 

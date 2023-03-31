@@ -119,8 +119,15 @@ const StyledRadio = styled(FormsRadio)`
 `
 
 export const PainPointsForm = ({ register, errors, isSubmit, submitted }) => {
+    /*
     const toggle = UseFormToggleHandel()
     const hiddenState = UseFormHiddenState()
+    */
+
+    const [hiddenState, setHiddenState] = useState(true);
+    function toggle() {
+            setHiddenState(previous => !previous)
+    }
 
     const radio = pagesData.forms.clientsNeeds.hasAds
     const url = pagesData.forms.clientsNeeds.webURL
@@ -132,13 +139,13 @@ export const PainPointsForm = ({ register, errors, isSubmit, submitted }) => {
     const validStatus = validedSubmit(isSubmit, errorsArray, fieldName)
 
     return (
-        <StyledFormWrapper isHidden={!hiddenState} validStatus={validStatus} submitted={submitted}>
-            <StyledTitle className='ads' isHidden={!hiddenState} submitted={submitted} onClick={toggle}>
+        <StyledFormWrapper isHidden={hiddenState} validStatus={validStatus} submitted={submitted}>
+            <StyledTitle className='ads' isHidden={hiddenState} submitted={submitted} onClick={toggle}>
                 {pagesData.forms.clientsNeeds.title}
                 <div className='validIcon' />
                 <IconDropDown/>
             </StyledTitle>
-            <Div className="inputForms" tobeHidden={!hiddenState} submitted={submitted}> 
+            <Div className="inputForms" tobeHidden={hiddenState} submitted={submitted}> 
                 <StyledRadio 
                     type={radio.type}
                     fieldName={radio.id}

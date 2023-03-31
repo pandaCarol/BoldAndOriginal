@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { defaultSection, defaultSubTitle, defaultUl, defaultLi } from "../css/cssDefault";
+import { Link } from "react-router-dom";
 
 import linkedIn from '../imgs/icon/linkedIn.svg';
 import linkedInHover from '../imgs/icon/linkedInHover.svg';

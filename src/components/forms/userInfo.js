@@ -98,9 +98,16 @@ const Div = styled.div`
 `
 
 export const UserForm = ({ register, errors, isSubmit, submitted }) => {
+    /*
     const toggle = UseFormToggleHandel();
     const hiddenState = UseFormHiddenState();
+    */
 
+    // click -> independent between each subforms
+   const [hiddenState, setHiddenState] = useState(true);
+   function toggle() {
+        setHiddenState(previous => !previous)
+   }
     
     const fieldName = [];
     const infosForm = pagesData.forms.clientsInfo.infos.map(item => {
