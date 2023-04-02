@@ -25,11 +25,11 @@ function App() {
         <NavBar />
         <Routes >
           <Route path='BoldAndOriginal/' element={<Homepage />} />
-          <Route path="/features" element={<FeaturesPage />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faq" element={<FAQ />} />
+          <Route path="BoldAndOriginal/features" element={<FeaturesPage />} />
+          <Route path="BoldAndOriginal/solutions" element={<Solutions />} />
+          <Route path="BoldAndOriginal/pricing" element={<Pricing />} />
+          <Route path="BoldAndOriginal/about" element={<About />} />
+          <Route path="BoldAndOriginal/faq" element={<FAQ />} />
         </Routes>
         <Footer />
     </Container>
