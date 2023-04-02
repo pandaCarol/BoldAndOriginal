@@ -136,7 +136,7 @@ export const Contact = ({lists}) => {
 
     return (
         <ContactWrapper>
-            <Link to={'/faq'}><div className="iconFAQ"></div></Link>
+            <Link to={'BoldAndOriginal/faq'}><div className="iconFAQ"></div></Link>
             {contactDetails}
         </ContactWrapper>
     )

@@ -115,19 +115,19 @@
         "btn": "Contact Sales",
         "navbar": [
             {
-                "name": "/features",
+                "name": "BoldAndOriginal/features",
                 "contents": "Why Bold & Original"
             }, 
             {
-                "name": "/solutions",
+                "name": "BoldAndOriginal/solutions",
                 "contents": "Solutions"
             }, 
             {
-                "name": "/pricing",
+                "name": "BoldAndOriginal/pricing",
                 "contents": "Pricing"
             },  
             {
-                "name": "/about",
+                "name": "BoldAndOriginal/about",
                 "contents": "About"
             }
         ]
