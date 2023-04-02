@@ -113,7 +113,24 @@
 
     "header": {
         "btn": "Contact Sales",
-        "navbar": ["Why Bold & Original", "Solutions", "Pricing", "About"]
+        "navbar": [
+            {
+                "name": "/features",
+                "contents": "Why Bold & Original"
+            }, 
+            {
+                "name": "/solutions",
+                "contents": "Solutions"
+            }, 
+            {
+                "name": "/pricing",
+                "contents": "Pricing"
+            },  
+            {
+                "name": "/about",
+                "contents": "About"
+            }
+        ]
     },
 
     "home": {

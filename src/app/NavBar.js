@@ -10,16 +10,18 @@ import logoColor from '../imgs/logo/logoColor.png';
 import { defaultSection } from "../css/cssDefault";
 
 import pagesData from '../data/pagesData.json';
+import { Link } from "react-router-dom";
 
 const HeaderWrapper = styled.header`
     position: fixed;
+
     top: 0;
     width: 100%;
     z-index: 2;
     background-color: white;
 
     display: flex;
-    padding: 12px 0; 
+    padding: 2vh 0;
 `
 const NavWrapper = styled(defaultSection)`
     
@@ -32,7 +34,7 @@ const NavWrapper = styled(defaultSection)`
 export const NavBar = () => {
     return (
         <HeaderWrapper>
-            <IconWrapper iconLink={logoColor}/>
+            <Link to={'BoldAndOriginal/'}><IconWrapper iconLink={logoColor}/></Link>
             <NavWrapper>
                 <ContactSale contents={pagesData.header.btn} />
                 <NavigationBar contents={pagesData.header.navbar} />

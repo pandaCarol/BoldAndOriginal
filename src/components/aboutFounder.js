@@ -9,20 +9,23 @@ const Title = styled(defaultTitle)`
     margin-bottom: 0;
     margin-top: 0;
     font-weight: 0;
+    margin-left: 1vw;
+    width: 50%;
 `
 const FounderName = styled(defaultSubTitle)`
     text-align: center;
-    margin-bottom: 0;
+    margin: 0;
     font-weight: 500;
+    margin-left: 1vw;
+    width: 50%;
 `
 const Wrapper = styled(defaultSection)`
     @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
     &&.founder {
         width: 45%;
-        align-items: center;
         margin: 0;
-        display: grid;
+        justify-content: center;
     }
     
     &&.intro {
@@ -55,22 +58,21 @@ const IntroContent = styled(defaultsText)`
 `
 const ProfilePic = styled.div`
     margin: calc(0.5rem + 1vh) auto;
+    margin-left: 1vw;
     content: '';
     background-image: url(${founder});
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 70%;
-    height: calc(1rem + 30vh);
+    width: 50%;
+    height: calc(1rem + 25vh);
     
 `
 export const Founder = ({item}) => {
     return (
         <Wrapper className="founder">
             <ProfilePic className="profilePic"></ProfilePic>
-            <div className="founderContentWrapper">
-                <FounderName>{item.name}</FounderName>
-                <Title>{item.title}</Title>
-            </div>
+            <FounderName>{item.name}</FounderName>
+            <Title>{item.title}</Title>
         </Wrapper>
     )
 }

@@ -23,13 +23,14 @@ function App() {
   return (
     <Container>
         <NavBar />
-        <main>
-          <Homepage />
-          <FeaturesPage />
-          <Solutions />
-          <Pricing />
-          <About />
-        </main>
+        <Routes >
+          <Route path='BoldAndOriginal/' element={<Homepage />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FAQ />} />
+        </Routes>
         <Footer />
     </Container>
   );

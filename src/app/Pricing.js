@@ -7,7 +7,7 @@ import pagesData from '../data/pagesData.json';
 
 const PricingWrapper = styled(defaultSection)`
     display: flex;
-    margin: calc(1rem + 5vh) 0;
+    margin: calc(1rem + 18vh) 0 calc(1rem + 5vh);
     position: relative;
 `
 const Title = styled(pageTitle)`

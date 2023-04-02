@@ -108,7 +108,7 @@ const ItemsCell = styled.div`
 
     &&:before {
         display: inline-block;
-        margin-top: 0.3rem;
+        margin-top: 0.55rem;
         content: '';
         height: 1.5rem;
         width: 1.5rem;

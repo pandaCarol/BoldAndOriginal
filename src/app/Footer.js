@@ -18,14 +18,10 @@ const FooterWrapper = styled.footer`
 
 export const Footer = () => {
     return (
-        <ToggleProviders>
-            <FooterWrapper>
-                <Title title={pagesData.footer.title}/>
-                <Contact lists={pagesData.footer.contact}/>
-                <FAQ />
-            </FooterWrapper>
-        </ToggleProviders>
-        
+        <FooterWrapper>
+            <Title title={pagesData.footer.title}/>
+            <Contact lists={pagesData.footer.contact}/>
+        </FooterWrapper>
     )
 }
 

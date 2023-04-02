@@ -6,9 +6,8 @@ import pagesData from '../data/pagesData.json';
 
 const Wrapper = styled(defaultSection)`
     display: flex;
-    margin: calc(1rem + 5vh) 0;
+    margin: calc(1rem + 18vh) 0 calc(1rem + 5vh);
     position: relative;
-
     height: 80vh;
 `
 const Title = styled(pageTitle)`

@@ -49,6 +49,7 @@ const ExamplePercentage = styled(defaultTitle)`
     font-size: ${props => props.className === '20%' ? '4rem' : '7rem'};
 `
 const ExampleTitle = styled(defaultSubTitle)`
+    font-size: 1.4rem;
 `
 const ExampleContent = styled(defaultsText)`
 `

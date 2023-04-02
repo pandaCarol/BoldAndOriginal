@@ -1,24 +1,21 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { FAQContent } from "../components/faq";
-import { UseToggleHandel, UseToggleState } from "../components/hooks";
 import { defaultSection, defaultTitle } from "../css/cssDefault";
+
 
 import pagesData from '../data/pagesData.json';
 
 import iconClose from '../imgs/icon/iconClose.svg';
+import { Link, useNavigate } from "react-router-dom";
 
 const FAQWrapper = styled(defaultSection)`
     display: ${props => props.isHidden ? "none" : "block"};
-    margin: calc(1.5rem + 5vh) 0;
+    margin: calc(1rem + 18vh) 0 calc(1rem + 5vh);
     background-color: white;
     text-align: center;
     height: 100vh;
     width: 100%;
-
-    position:absolute;
-    top: -65vh;
-    left: 0;
 
     .iconClose {
         content: "";
@@ -32,8 +29,6 @@ const FAQWrapper = styled(defaultSection)`
 
         :hover {
             cursor: pointer;
-            width: 2rem;
-            height: 2rem;
             background-image: url(${iconClose});
         }
     }
@@ -43,7 +38,7 @@ const Title = styled(defaultTitle)`
 const TitleWrapper = styled.div`
     padding: 3rem 12vw;
     background-color: white;
-    position: sticky;
+    position: fixed;
     top: 16vh;
     z-index: 1;
 
@@ -52,14 +47,16 @@ const TitleWrapper = styled.div`
 `
 
 export const FAQ = () => {
-    const toggle = UseToggleHandel();
-    const hiddenStatus = UseToggleState();
+    const navigate = useNavigate()
+    function goBack() {
+        navigate(-1)
+    }
 
     return (
-        <FAQWrapper isHidden={hiddenStatus}>
-            <TitleWrapper className="titleWrapper">
+        <FAQWrapper >
+            <TitleWrapper className="titleWrapper" >
                 <Title>{pagesData.faq.title}</Title>
-                <div className="iconClose" onClick={toggle}></div>
+                <div className="iconClose" onClick={goBack}></div>
             </TitleWrapper>
             <FAQContent lists={pagesData.faq.content}/>
         </FAQWrapper> 

@@ -8,7 +8,7 @@ import { defaultSection } from "../css/cssDefault";
 import pagesData from '../data/pagesData.json';
 
 const FeaturesWrapper = styled(defaultSection)`
-    margin: calc(1rem + 5vh) 0;
+    margin: calc(1rem + 15vh) 0 0;
     display: flex;
     position: relative;
     

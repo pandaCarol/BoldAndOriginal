@@ -33,9 +33,10 @@ const AnswerWrapper = styled.div`
     }
 `
 const Wrapper = styled.div`
-    height: 50vh;
+    height: 100vh;
     width: 75%;
     margin: 0 auto;
+    padding-top: calc(1rem + 25vh);
     overlay: hidden;
 `
 
