@@ -17,11 +17,12 @@ import { MainPage } from './main';
 
 function App() {
   return (
-    <Container>
-        <NavBar />
-        <MainPage />
-        <Footer />
-    </Container>
+      <Container>
+            <NavBar />
+            <MainPage />
+          <Footer />
+      </Container>
+    
   );
 }
 

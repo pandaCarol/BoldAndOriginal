@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Contact, Title } from "../components/footers";
-import { ToggleProviders } from "../components/hooks";
+import { HiddenWrapper, ToggleProviders, UseFormHiddenState } from "../components/hooks";
 import { defaultSection } from "../css/cssDefault";
 
 import pagesData from '../data/pagesData.json';
@@ -18,10 +18,14 @@ const FooterWrapper = styled.footer`
 
 export const Footer = () => {
     return (
-        <FooterWrapper>
-            <Title title={pagesData.footer.title}/>
-            <Contact lists={pagesData.footer.contact}/>
-        </FooterWrapper>
+        <HiddenWrapper>
+            <FooterWrapper>
+                <Title title={pagesData.footer.title}/>
+                <Contact lists={pagesData.footer.contact}/>
+                <FAQ />
+            </FooterWrapper>
+        </HiddenWrapper>
+        
     )
 }
 

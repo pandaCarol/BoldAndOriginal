@@ -48,7 +48,7 @@ export const Terms = () => {
     })
 
     const isHidden = UseFormHiddenState()
-    console.log(isHidden)
+    //console.log(isHidden)
 
     return (
             <Wrapper className='terms' style={{'display': `${isHidden ? 'none' : 'block'}`} }>

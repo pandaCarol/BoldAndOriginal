@@ -8,55 +8,53 @@ import pagesData from '../data/pagesData.json';
 
 import iconClose from '../imgs/icon/iconClose.svg';
 import { Link, useNavigate } from "react-router-dom";
+import { CloseBtn } from "../components/closeBtn";
+import { UseFormHiddenState, UseFormToggleHandel } from "../components/hooks";
 
 const FAQWrapper = styled(defaultSection)`
-    display: ${props => props.isHidden ? "none" : "block"};
+    position: fixed;
+    z-index: 3;
+    top: -100vh;
+    left: 0;
     margin: calc(1rem + 18vh) 0 calc(1rem + 5vh);
     background-color: white;
     text-align: center;
     height: 100vh;
     width: 100%;
 
-    .iconClose {
-        content: "";
-        width: 1.5rem;
-        height: 1.5rem;
-        background-image: url(${iconClose});
-        background-size: contain;
-        background-repeat: no-repeat;
-        
-        margin: auto 0;
+    .titleWrapper {
+        position: sticky;
 
-        :hover {
-            cursor: pointer;
-            background-image: url(${iconClose});
+        .iconClose {
+            top: 2.5rem;
+            :hover {
+                top: 2.3rem;
+            }
         }
     }
 `
 const Title = styled(defaultTitle)`
 `
 const TitleWrapper = styled.div`
-    padding: 3rem 12vw;
-    background-color: white;
-    position: fixed;
-    top: 16vh;
-    z-index: 1;
+    padding: 1rem 0;
+    background-color: rgb(235, 209, 52);
+    width: 100%;
+    top: 0;
+    z-index: 5;
 
     display: grid;
     grid-template-columns: 50fr 1fr;
 `
+const closeBtn = <CloseBtn />
 
 export const FAQ = () => {
-    const navigate = useNavigate()
-    function goBack() {
-        navigate(-1)
-    }
-
+    const isHidden = UseFormHiddenState()
+    //console.log(isHidden)
     return (
-        <FAQWrapper >
+        <FAQWrapper style={{'display': `${isHidden ? 'none' : 'block'}`}}>
             <TitleWrapper className="titleWrapper" >
                 <Title>{pagesData.faq.title}</Title>
-                <div className="iconClose" onClick={goBack}></div>
+                {closeBtn}
             </TitleWrapper>
             <FAQContent lists={pagesData.faq.content}/>
         </FAQWrapper> 

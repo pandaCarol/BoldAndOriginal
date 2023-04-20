@@ -13,6 +13,7 @@ import email from '../imgs/icon/email.svg';
 import emailHover from '../imgs/icon/emailHover.svg';
 import home from '../imgs/icon/home.svg';
 import phone from '../imgs/icon/phone.svg';
+import { UseFormHiddenState, UseFormToggleHandel } from "./hooks";
 const icons = [home, phone, email];
 
 const TitleWrapper = styled(defaultSection)`
@@ -128,6 +129,8 @@ export const Title = ({ title }) => {
 }
 
 export const Contact = ({lists}) => {
+    const toHidden = UseFormToggleHandel()
+    
     const contactDetails = lists.map( (list, index) => {
         return (
             <ContactInfo key={list.icon} className={list.icon} bullets={icons[index]}>{list.details}</ContactInfo>
@@ -136,7 +139,7 @@ export const Contact = ({lists}) => {
 
     return (
         <ContactWrapper>
-            <Link to={'BoldAndOriginal/faq'}><div className="iconFAQ"></div></Link>
+            <div className="iconFAQ" onClick={toHidden}/>
             {contactDetails}
         </ContactWrapper>
     )

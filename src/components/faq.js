@@ -34,10 +34,16 @@ const AnswerWrapper = styled.div`
 `
 const Wrapper = styled.div`
     height: 100vh;
-    width: 75%;
-    margin: 0 auto;
-    padding-top: calc(1rem + 25vh);
-    overlay: hidden;
+    width: 80%;
+    margin: 0 auto 5rem;
+    margin-left: 0;
+    margin-left: 0;
+    padding: calc(1rem + 12vh) 10% 0;
+    background-color: white;
+
+    position: absolute;
+    top: 85vh;
+    overflow-y: scroll;
 `
 
 export const FAQContent = ({lists}) => {

@@ -76,7 +76,7 @@ export function HiddenWrapper({ children }) {
     }
 
     return (
-        <FormHiddenWrapper.Provider value={isHidden}>
+        <FormHiddenWrapper.Provider value={isHidden} >
             <FormToggle.Provider value={handelClick}>
                 { children }
             </FormToggle.Provider>
