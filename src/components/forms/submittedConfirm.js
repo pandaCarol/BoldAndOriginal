@@ -16,6 +16,8 @@ export const ConfirmInfo = ({className, contents, confirm}) => {
     })
 
     return (
-        <div className={className}>{confirmContents}</div>
+        <div className={className}>
+            {confirmContents}
+        </div>
     )
 }

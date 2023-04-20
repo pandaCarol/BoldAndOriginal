@@ -22,6 +22,10 @@ const Wrapper = styled.div`
         display: ${props => props.submitted ? 'block' : 'none'};
     }
 
+    .checkboxWrapper {
+        display: ${props => props.submitted ? 'none' : 'block'};
+    }
+
     .formSubmit {
         width: 50%;
         border: 3px solid rgba(224, 220, 217, 1);
@@ -36,6 +40,7 @@ const Wrapper = styled.div`
 
     .protocol {
         padding: calc(0.1rem + 0.5vh) calc(0.5rem + 0.5vw);
+        display: inline;
     }
 
     .checkbox {
@@ -57,6 +62,12 @@ const Wrapper = styled.div`
                 cursor: pointer;
                 height: 1.2rem;
                 width: 1.2rem;
+            }
+        }
+
+        label {
+            :hover {
+                cursor: pointer;
             }
         }
 
@@ -111,6 +122,7 @@ export const FormsComponents = () => {
         }, 5000)
     }, [doseSubmit])
 
+    
     return (
         <FormsWrapper>
             <Wrapper submitted={submitted}>
@@ -119,15 +131,17 @@ export const FormsComponents = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <HiddenWrapper>
                         <div className="inputForms">
-                            <UserForm register={register} errors={errors} isSubmit={doseSubmit} submitted={submitted}/>
-                            <PainPointsForm register={register} errors={errors} isSubmit={doseSubmit} submitted={submitted}/>
-                            <Checkbox register={register} errors={errors} isSubmit={doseSubmit} />
-                            <ConfirmInfo className="confirmInfo" contents={pagesData.forms.confirm} confirm={submitted}/>
-                            <StyledSubmit className="formSubmit" content='Submit' onClick={handelOnClick} />
+                            <HiddenWrapper >
+                                <UserForm register={register} errors={errors} isSubmit={doseSubmit} submitted={submitted}/>
+                                <PainPointsForm register={register} errors={errors} isSubmit={doseSubmit} submitted={submitted}/>
+                                <Checkbox register={register} errors={errors} isSubmit={doseSubmit} />
+                                <ConfirmInfo className="confirmInfo" contents={pagesData.forms.confirm} confirm={submitted}/>
+                                <StyledSubmit className="formSubmit" content='Submit' onClick={handelOnClick} />
+                            </HiddenWrapper>
                         </div>
                     </HiddenWrapper>
                 </form>
-            </Wrapper>    
+            </Wrapper>  
         </FormsWrapper>
     )
 }

@@ -94,6 +94,7 @@
         "dataProtocol": {
             "id": "protocol",
             "content": ["I agree to Bold And Original' Terms and Conditions and Privacy Policy."],
+            "termsTage": "Terms && Conditions",
             "type": "checkbox"
         },
         "package": {
@@ -107,7 +108,21 @@
         "confirm": [
             "Thanks for contacting us!",
             "Your submission is received and we will contact you soon"      
-        ]
+        ],
+        "terms": {
+            "title": "Terms & Conditions",
+            "subTitle": "Please read these terms and conditions carefully before using our website.",
+            "update": "Last updated April 20, 2023",
+            "contents": [
+                "You acknowledge that the information you provide in the lead form is true, accurate, and complete to the best of your knowledge.",
+                "You consent to us collecting and using your personal information, including your name, email address, phone number, and any other information you provide in the lead form, for the purposes of contacting you about our products or services.",
+                "You understand that submitting the lead form does not guarantee that we will contact you, and we reserve the right to contact only those individuals whose needs and interests align with our products or services.",
+                "You agree that we may share your personal information with third-party service providers who assist us with our marketing efforts, such as email service providers or lead generation companies.",
+                "You acknowledge that you have read and agree to our website's Privacy Policy, which outlines how we collect, use, and protect your personal information.",
+                "You understand that you may unsubscribe from our marketing communications at any time by clicking the \"unsubscribe\" link in our emails or contacting us directly."
+            ],
+            "footer": "By submitting the lead form, you agree to these terms and conditions and consent to our use of your personal information as described herein."
+        }
     },
 
 

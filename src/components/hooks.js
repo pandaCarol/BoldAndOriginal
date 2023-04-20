@@ -69,7 +69,7 @@ export function UseFormToggleHandel() {
 }
 
 export function HiddenWrapper({ children }) {
-    const [isHidden, setHidden] = useState(false)
+    const [isHidden, setHidden] = useState(true)
 
     function handelClick() {
         setHidden(previous => !previous);

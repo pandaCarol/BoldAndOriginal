@@ -9,7 +9,7 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 16px;
 
-    & button, h1, h2, h3, p, ul, li, input, label, textarea {
+    & button, h1, h2, h3, p, ul, li, i, input, label, textarea {
         font-family: 'Alata', sans-serif;
         box-sizing: border-box;
     }
@@ -61,6 +61,8 @@ export const defaultForm = styled.div`
         text-align: left;
     }
 
+`
+export const defaultItalics = styled.i`
 `
 
 /* CSS Forms */
