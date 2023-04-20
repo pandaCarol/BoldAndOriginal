@@ -6,11 +6,10 @@ import { Founder, Introduction } from "../components/aboutFounder";
 import pagesData from '../data/pagesData.json';
 
 const AboutWrapper = styled(defaultSection)`
-    height: 80vh;
     backgournd-color: rgba(255, 255, 255, 0.6);
     display: flex;
     flex-direction: row;
-    margin: calc(1rem + 18vh) calc(1.5rem + 10vw) calc(1rem + 5vh);
+    margin: calc(1rem + 18vh) calc(1.5rem + 10vw) calc(1rem + 15vh);
     padding: 2rem 1rem;
     padding-top: calc(2.5rem + 20vh);
 `
