@@ -34,13 +34,16 @@ const CasesWrapper = styled(defaultSection)`
     flex-direction: row;
     justify-content: flex-end;
     margin: calc(1rem + 5vh) 4vw;
+    height: 100%;
 `
 const ExampleWrapper = styled(defaultSection)`
     text-align: right;
-    width: 24%;
+    align-self: flex-end;
+    height: max-content;
+
     &:first-child {
         margin-right: calc(3rem + 2vw);
-        align-self: flex-end;
+        
     }
 `
 const ExamplePercentage = styled(defaultTitle)`

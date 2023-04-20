@@ -16,6 +16,7 @@ import { About } from './app/About';
 import { FAQ } from './app/FAQ';
 import { Footer } from './app/Footer';
 import { Solutions } from './app/Solutions';
+import { MainPage } from './main';
 
 
 
@@ -23,14 +24,7 @@ function App() {
   return (
     <Container>
         <NavBar />
-        <Routes >
-          <Route path='BoldAndOriginal/' element={<Homepage />} />
-          <Route path="BoldAndOriginal/features" element={<FeaturesPage />} />
-          <Route path="BoldAndOriginal/solutions" element={<Solutions />} />
-          <Route path="BoldAndOriginal/pricing" element={<Pricing />} />
-          <Route path="BoldAndOriginal/about" element={<About />} />
-          <Route path="BoldAndOriginal/faq" element={<FAQ />} />
-        </Routes>
+        <MainPage />
         <Footer />
     </Container>
   );

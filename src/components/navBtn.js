@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { defaultNaviButton, defaultSection } from "../css/cssDefault";
 import { NavLink, Link } from "react-router-dom";
+import { scrollTo } from "../functions/scrollTo";
 
 const BarWrapper = styled(defaultSection)`
     margin-top: 0.5rem;
@@ -22,9 +23,7 @@ export const NavigationBar = ({contents})  => {
     
     const naviContents = contents.map(item => {
         return(
-            <Link key={item.name} to={item.name} >
-                <NaviButton >{item.contents}</NaviButton>
-            </Link>
+            <NaviButton key={item.name} onClick={()=> scrollTo(item.name)}>{item.contents}</NaviButton>
         )
     })
 

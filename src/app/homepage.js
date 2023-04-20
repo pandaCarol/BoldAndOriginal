@@ -18,7 +18,7 @@ const HomeWrapper = styled(defaultSection)`
 export const Homepage = () => {
 
     return (
-        <HomeWrapper img={bg}>
+        <HomeWrapper img={bg} id='home'>
             <Content 
                 titles={pagesData.home.title} 
                 subtitle={pagesData.home.subTitle} 

@@ -8,9 +8,11 @@ import { defaultSection } from "../css/cssDefault";
 import pagesData from '../data/pagesData.json';
 
 const FeaturesWrapper = styled(defaultSection)`
-    margin: calc(1rem + 15vh) 0 0;
+    padding-top: calc(0.5rem + 20vh);
     display: flex;
+    flex-direction: row;
     position: relative;
+    height: 80vh;
     
     &&:before {
         position: absolute;
@@ -28,7 +30,7 @@ const FeaturesWrapper = styled(defaultSection)`
 
 export const FeaturesPage = () => {
     return (
-        <FeaturesWrapper img={feature}>
+        <FeaturesWrapper img={feature} id='features'>
             <Benefits 
                 title={pagesData.features.benefits.title} 
                 subtitles={pagesData.features.benefits.subTitle}

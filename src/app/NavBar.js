@@ -34,7 +34,7 @@ const NavWrapper = styled(defaultSection)`
 export const NavBar = () => {
     return (
         <HeaderWrapper>
-            <Link to={'BoldAndOriginal/'}><IconWrapper iconLink={logoColor}/></Link>
+            <IconWrapper iconLink={logoColor} />
             <NavWrapper>
                 <ContactSale contents={pagesData.header.btn} />
                 <NavigationBar contents={pagesData.header.navbar} />

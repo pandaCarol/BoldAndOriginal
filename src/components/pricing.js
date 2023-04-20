@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { defaultLi, defaultSection, defaultsText, defaultSubTitle, defaultUl, pageTitle } from "../css/cssDefault";
 import { ContactSale } from "./btn";
@@ -6,6 +6,7 @@ import { ContactSale } from "./btn";
 import pricingBg from '../imgs/bg/pricingBg.svg';
 import bgPricing300 from '../imgs/bg/bgPricing300.svg';
 import bgPricing500 from '../imgs/bg/bgPricing500.svg';
+import { set } from "react-hook-form";
 
 const Title = styled(pageTitle)`
     position: relative;
@@ -58,20 +59,24 @@ const GridBg = styled.div`
 `
 
 const Wrapper = styled.div`
-    display: inline-flex;
-    width: 88%;
+    position: relative;
+
+    .packages {
+        display: inline-flex;
+        width: 88%;
+    }
+    
 
     &&:before {
         position: absolute;
-        bottom: calc(1rem + 10vh);
-        top: -25%;
+        bottom: 0;
         z-index: -2;
         content: "";
         width: 100%;
-        height: 125%; 
+        height: ${props => props.bgheight};
         background-image: url(${pricingBg});
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: ${props => props.screenwidth};
         opacity: 0.85;
     }
     
@@ -173,6 +178,19 @@ const Content = styled(defaultsText)`
 `
 
 export const Products = ({contents}) => {
+    
+    const [screenSize, setScreenSize] = useState(window.innerWidth)
+    useEffect(()=>{
+        window.addEventListener('resize', handelResize)
+        return () => {
+            window.removeEventListener('resize', handelResize)
+        }
+    }, [screenSize])
+
+    function handelResize() {
+        setScreenSize(window.innerWidth)
+    }
+
     const packages = contents.map((item, index) => {
         const packagesDetails = item.contents.map((content, index) => {
             return (
@@ -204,10 +222,13 @@ export const Products = ({contents}) => {
             </div>  
         )
     })
+    
+    const bgWidth = screenSize.toString() + 'px'
+    const bgHeight = Math.ceil(screenSize*0.0735 + 58.769).toString()+'%'
 
     return (
-        <Wrapper>
-            {packages}
+        <Wrapper screenwidth={bgWidth} bgheight={bgHeight}>
+            <div className="packages" >{packages}</div>
         </Wrapper>
     )
 }
