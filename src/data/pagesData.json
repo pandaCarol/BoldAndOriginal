@@ -94,7 +94,7 @@
         "dataProtocol": {
             "id": "protocol",
             "content": ["I agree to Bold And Original' Terms and Conditions and Privacy Policy."],
-            "termsTage": "Terms && Conditions",
+            "termsTage": "Terms & Conditions",
             "type": "checkbox"
         },
         "package": {
