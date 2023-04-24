@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { defaultSection, defaultTitle, defaultsText } from '../css/cssDefault';
+import { defaultSection, defaultTitle, defaultsText } from '../../css/cssDefault';
 
 const ContentWrapper = styled(defaultSection)`
     width: 70%;

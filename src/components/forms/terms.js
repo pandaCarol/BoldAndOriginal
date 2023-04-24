@@ -3,11 +3,13 @@ import styled from "styled-components";
 import pagesData from '../../data/pagesData.json';
 
 import { defaultSection, defaultTitle, defaultSubTitle, defaultsText, defaultLi, defaultUl } from "../../css/cssDefault";
-import { CloseBtn } from "../closeBtn";
+import { CloseBtn } from "../icons/cross-icon";
 import { HiddenWrapper, UseFormHiddenState } from "../hooks";
 
 const Wrapper = styled(defaultSection)`
     position: relative;
+    color: rgb(85, 91, 112);
+    
     &&.terms {
         position: absolute;
         top: 15vh;

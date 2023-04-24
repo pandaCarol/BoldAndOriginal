@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Products } from "../components/pricing";
+import { Products } from "../components/subComponents/pricing";
 import { defaultSection, pageTitle } from "../css/cssDefault";
 
 import pagesData from '../data/pagesData.json';

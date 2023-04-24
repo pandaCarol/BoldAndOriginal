@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { scrollTo } from "../functions/scrollTo";
+import { scrollTo } from "../../functions/scrollTo";
 
 const IconDiv = styled.img`
-    widt: 150px;
+    width: 150px;
     height: 94px;
     margin: 3px;
 
@@ -16,9 +16,9 @@ const IconDiv = styled.img`
     }
 `
 
-export const IconWrapper = ({iconLink}) => {
+export const Logo = ({iconLink}) => {
     const targetPage = 'home'
     return (
-        <IconDiv src={iconLink} onClick={() => scrollTo(targetPage)}></IconDiv>
+        <IconDiv src={iconLink} onClick={() => scrollTo(targetPage)} className="logo"></IconDiv>
     )
 }

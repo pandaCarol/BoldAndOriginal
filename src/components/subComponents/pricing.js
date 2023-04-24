@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { defaultLi, defaultSection, defaultsText, defaultSubTitle, defaultUl, pageTitle } from "../css/cssDefault";
-import { ContactSale } from "./btn";
+import { defaultLi, defaultSection, defaultsText, defaultSubTitle, defaultUl, pageTitle } from "../../css/cssDefault";
+import { ContactSale } from "../buttons/contactSales";
 
-import pricingBg from '../imgs/bg/pricingBg.svg';
-import bgPricing300 from '../imgs/bg/bgPricing300.svg';
-import bgPricing500 from '../imgs/bg/bgPricing500.svg';
-import { set } from "react-hook-form";
+import pricingBg from '../../imgs/bg/pricingBg.svg';
+import bgPricing300 from '../../imgs/bg/bgPricing300.svg';
+import bgPricing500 from '../../imgs/bg/bgPricing500.svg';
 
 const Title = styled(pageTitle)`
     position: relative;

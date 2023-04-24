@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { defaultNaviButton, defaultSection } from "../css/cssDefault";
+import { defaultNaviButton, defaultSection } from "../../css/cssDefault";
 import { NavLink, Link } from "react-router-dom";
-import { scrollTo } from "../functions/scrollTo";
+import { scrollTo } from "../../functions/scrollTo";
 
 const BarWrapper = styled(defaultSection)`
     margin-top: 0.5rem;
@@ -19,6 +19,7 @@ const NaviButton = styled(defaultNaviButton)`
     }
 `
 //letter-spacing: 0px;
+
 export const NavigationBar = ({contents})  => {
     
     const naviContents = contents.map(item => {

@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { FormTitles } from "../../css/cssDefault"
 
+import submitted from  "../../imgs/icon/submitted.svg"
+
 const StyledConfirm = styled(FormTitles)`
     text-align: left;
     color: #3A8B39;
@@ -9,8 +11,19 @@ const StyledConfirm = styled(FormTitles)`
         font-size: 2rem;
     }
 `
+const IconSubmitted = styled.div`
+    position: absolute;
+    content: '';
+    background-repeat: no;
+    background-size: contain;
+    width: ${props => props.toDisplay ? '1.8rem': '0'};
+    height: 1.8rem;
+    bottom: -2rem;
+    right: 48%;
+    background-image: url(${submitted});
+`
 
-export const ConfirmInfo = ({className, contents, confirm}) => {
+export const ConfirmInfo = ({className, contents, confirm, toDisplay }) => {
     const confirmContents = contents.map((content,index) => {
         return <StyledConfirm key={index}>{content}</StyledConfirm>
     })
@@ -18,6 +31,7 @@ export const ConfirmInfo = ({className, contents, confirm}) => {
     return (
         <div className={className}>
             {confirmContents}
+            <IconSubmitted toDisplay={toDisplay}/>
         </div>
     )
 }

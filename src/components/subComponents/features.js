@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { defaultSection, defaultTitle, defaultsText, defaultSubTitle } from "../css/cssDefault";
+import { defaultSection, defaultTitle, defaultsText, defaultSubTitle } from "../../css/cssDefault";
 
-import star from '../imgs/icon/star.svg';
+import star from '../../imgs/icon/star.svg';
 
 //css for benifits block
 const BenefitsWrapper = styled(defaultSection)`

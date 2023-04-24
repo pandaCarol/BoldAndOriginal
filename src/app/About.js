@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { defaultSection } from "../css/cssDefault";
-import { Founder, Introduction } from "../components/aboutFounder";
+import { Founder, Introduction } from "../components/subComponents/aboutFounder";
 
 import pagesData from '../data/pagesData.json';
 

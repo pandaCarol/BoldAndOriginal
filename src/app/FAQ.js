@@ -1,15 +1,12 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { FAQContent } from "../components/faq";
+import { FAQContent } from "../components/subComponents/faq";
 import { defaultSection, defaultTitle } from "../css/cssDefault";
-
 
 import pagesData from '../data/pagesData.json';
 
-import iconClose from '../imgs/icon/iconClose.svg';
-import { Link, useNavigate } from "react-router-dom";
-import { CloseBtn } from "../components/closeBtn";
-import { UseFormHiddenState, UseFormToggleHandel } from "../components/hooks";
+import { CloseBtn } from "../components/icons/cross-icon";
+import { UseFormHiddenState } from "../components/hooks";
 
 const FAQWrapper = styled(defaultSection)`
     position: fixed;

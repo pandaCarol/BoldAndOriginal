@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Benefits, CaseExamples } from "../components/features";
+import { Benefits, CaseExamples } from "../components/subComponents/features";
 
 import feature from '../imgs/bg/feature.jpg';
 import { defaultSection } from "../css/cssDefault";

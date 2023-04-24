@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 
-import { FormsInput, FormsRadio, FormsTextarea, FormsTitle, IconDropDown } from "./FormSubcomponents";
-import pagesData from '../../data/pagesData.json';
+import { FormsTextarea } from "../forms/textarea-Input";
+import { FormsRadio } from "../forms/radio-checkbox";
+import { FormsTitle, Titles } from "../forms/FormsTitle";
+import { FormsInput } from "../forms/text-Inputs";
+
 import styled from "styled-components";
 import { defaultForm } from "../../css/cssDefault";
-import { HasAds } from "./painPointsSubForm";
-import { UseFormHiddenState, UseFormToggleHandel } from "../hooks";
 import { validedSubmit } from "../../functions/validedSubmit";
 
 
@@ -16,13 +16,13 @@ import goUpHover from '../../imgs/forms/goUpHover.svg';
 import goUp from '../../imgs/forms/goUp.svg';
 import valid from '../../imgs/forms/valid.svg';
 
-const StyledTitle = styled(FormsTitle)`
+export const StyledTitle = styled(FormsTitle)`
     background-color: #EBD134;
 
     border-radius: ${props => (props.isHidden || props.submitted) ? "0.55rem" : "0.55rem 0.55rem 0 0"};
 `
 
-const StyledFormWrapper = styled(defaultForm)`
+export const StyledFormWrapper = styled(defaultForm)`
     position: relative;
 
     h2 {
@@ -115,38 +115,43 @@ const Div = styled.div`
         return (props.tobeHidden ? "none" : "block")
     }};
 `
-const StyledRadio = styled(FormsRadio)`
-`
 
-export const PainPointsForm = ({ register, errors, isSubmit, submitted }) => {
-    /*
-    const toggle = UseFormToggleHandel()
-    const hiddenState = UseFormHiddenState()
-    */
+export const PainPointsForm = ({ register, errors, isSubmit, submitted, contents, title, formHidden }) => {
+    //if form on landing Page, then form content should be hidden and drop down icon should be displayed
+    //means hiddenState -> true, <DropDown> props toDisplay -> true
+    
+    const [hiddenState, setHiddenState] = useState(initialState);
 
-    const [hiddenState, setHiddenState] = useState(true);
-    function toggle() {
-            setHiddenState(previous => !previous)
+    function initialState () {
+        return (formHidden === true ? true : false)
     }
 
-    const radio = pagesData.forms.clientsNeeds.hasAds
-    const url = pagesData.forms.clientsNeeds.webURL
-    const pp = pagesData.forms.clientsNeeds.painPoint
+    function toggle() {
+        if (formHidden === true) {
+            setHiddenState(previous => !previous)
+        }
+    }
 
-    const fieldName = Object.keys(pagesData.forms.clientsNeeds)
+    const radio = contents.hasAds
+    const url = contents.webURL
+    const pp = contents.painPoint
+
+    const fieldName = Object.keys(contents)
     fieldName.shift()
     const errorsArray = Object.keys(errors)
     const validStatus = validedSubmit(isSubmit, errorsArray, fieldName)
+    //console.log(validStatus)
 
     return (
-        <StyledFormWrapper isHidden={hiddenState} validStatus={validStatus} submitted={submitted}>
-            <StyledTitle className='ads' isHidden={hiddenState} submitted={submitted} onClick={toggle}>
-                {pagesData.forms.clientsNeeds.title}
-                <div className='validIcon' />
-                <IconDropDown/>
-            </StyledTitle>
+        <StyledFormWrapper className='painpoint' isHidden={hiddenState} validStatus={validStatus} submitted={submitted}>
+            <Titles 
+                className='ads'
+                title={title} dropdownDisplay={formHidden} onClick={toggle}
+                isHidden={hiddenState} submitted={submitted} validStatus={validStatus}
+            />
+            
             <Div className="inputForms" tobeHidden={hiddenState} submitted={submitted}> 
-                <StyledRadio 
+                <FormsRadio 
                     type={radio.type}
                     fieldName={radio.id}
                     label={radio.question}

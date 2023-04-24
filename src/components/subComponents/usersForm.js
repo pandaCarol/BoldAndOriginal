@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-
-import { FormsInput, FormsTitle, IconDropDown } from "./FormSubcomponents";
-import pagesData from '../../data/pagesData.json';
 import styled from "styled-components";
+
+import { FormsInput } from "../forms/text-Inputs";
+import { Titles } from "../forms/FormsTitle";
 import { defaultForm } from "../../css/cssDefault";
-import { UseFormHiddenState, UseFormToggleHandel, UsecontextSubmit, SubmitContents } from "../hooks";
 
 import user from '../../imgs/forms/user.svg';
 import email from '../../imgs/forms/email.svg';
@@ -18,12 +16,6 @@ import valid from '../../imgs/forms/valid.svg';
 
 import { validedSubmit } from "../../functions/validedSubmit";
 
-
-const StyledTitle = styled(FormsTitle)`
-    background-color: #EBD134;
-    
-    border-radius: ${props => (props.isHidden || props.submitted) ? "0.55rem" : "0.55rem 0.55rem 0 0"}
-`
 const StyledForm = styled(FormsInput)`
     display: none;
 `
@@ -97,20 +89,24 @@ const Div = styled.div`
     }};
 `
 
-export const UserForm = ({ register, errors, isSubmit, submitted }) => {
-    /*
-    const toggle = UseFormToggleHandel();
-    const hiddenState = UseFormHiddenState();
-    */
 
-    // click -> independent between each subforms
-   const [hiddenState, setHiddenState] = useState(true);
+export const UserForm = ({ register, errors, verified, submitted, contents, title, formHidden }) => {
+   //if form on landing Page, then form content should be hidden and drop down icon should be displayed
+   //means hiddenState -> true, <DropDown> props toDisplay -> true
+   const [hiddenState, setHiddenState] = useState(initialState);
+    
+   function initialState () {
+        return (formHidden === true ? true : false)
+   }
+
    function toggle() {
-        setHiddenState(previous => !previous)
+        if (formHidden === true) {
+            setHiddenState(previous => !previous)
+        }
    }
     
     const fieldName = [];
-    const infosForm = pagesData.forms.clientsInfo.infos.map(item => {
+    const infosForm = contents.infos.map(item => {
         fieldName.push(item.content);
         return (
             <StyledForm key={item.content}
@@ -128,16 +124,15 @@ export const UserForm = ({ register, errors, isSubmit, submitted }) => {
     })
 
     const errorsArray = Object.keys(errors);
-    const validStatus = validedSubmit(isSubmit, errorsArray, fieldName);
+    const validStatus = validedSubmit(verified, errorsArray, fieldName);
 
     return (
-        <StyledFormWrapper isHidden={hiddenState} validStatus={validStatus} submitted={submitted}>
-            <StyledTitle className='aboutYou' isHidden={hiddenState} submitted={submitted} onClick={toggle}>
-                {pagesData.forms.clientsInfo.title.onPage}
-                <div className='validIcon' />
-                <IconDropDown/>
-            </StyledTitle>
-            
+        <StyledFormWrapper className="users" isHidden={hiddenState} validStatus={validStatus} submitted={submitted}>
+            <Titles 
+                className='aboutYou' 
+                title={title} dropdownDisplay={formHidden} onClick={toggle}
+                isHidden={hiddenState} submitted={submitted} validstatus={validStatus}
+            />  
             <Div className="inputForms" tobeHidden={hiddenState} submitted={submitted}>{infosForm}</Div>
         </StyledFormWrapper>
     )

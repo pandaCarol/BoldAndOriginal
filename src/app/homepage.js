@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Content } from "../components/content";
+import { Content } from "../components/subComponents/homeContents";
 
 import bg from '../imgs/bg/bg.png';
-import { FormsComponents } from "../components/forms/FormOnPage";
+import { FormsComponents } from "./FormOnPage";
 import { defaultSection } from "../css/cssDefault";
 
 import pagesData from '../data/pagesData.json';
@@ -24,7 +24,7 @@ export const Homepage = () => {
                 subtitle={pagesData.home.subTitle} 
                 img={bg}
             />
-            <FormsComponents></FormsComponents>
+            <FormsComponents/>
         </HomeWrapper>
     )
 }

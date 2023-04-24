@@ -1,16 +1,16 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { defaultSection, defaultsText } from "../css/cssDefault";
+import { defaultSection, defaultsText } from "../../css/cssDefault";
 
-import you from '../imgs/icon/you.svg';
-import us from '../imgs/icon/us.svg';
-import share from '../imgs/icon/share.svg';
-import grant from '../imgs/icon/grant.svg';
-import search from '../imgs/icon/search.svg';
-import upload from '../imgs/icon/upload.svg';
-import refresh from '../imgs/icon/refresh.svg';
-import bookmark from '../imgs/icon/bookmark.svg';
-import settings from '../imgs/icon/settings.svg';
+import you from '../../imgs/icon/you.svg';
+import us from '../../imgs/icon/us.svg';
+import share from '../../imgs/icon/share.svg';
+import grant from '../../imgs/icon/grant.svg';
+import search from '../../imgs/icon/search.svg';
+import upload from '../../imgs/icon/upload.svg';
+import refresh from '../../imgs/icon/refresh.svg';
+import bookmark from '../../imgs/icon/bookmark.svg';
+import settings from '../../imgs/icon/settings.svg';
 
 const Wrapper = styled(defaultSection)`
     margin: calc(1rem + 5vh) calc(1rem + 2vw);

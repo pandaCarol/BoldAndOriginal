@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SolutionWay } from "../components/solutionTable";
+import { SolutionWay } from "../components/subComponents/solutionTable";
 import { defaultSection, pageTitle } from "../css/cssDefault";
 import pagesData from '../data/pagesData.json';
 

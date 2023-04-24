@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { defaultSection, defaultSubTitle, defaultUl, defaultLi } from "../css/cssDefault";
-import { Link } from "react-router-dom";
+import { defaultSection, defaultSubTitle, defaultUl, defaultLi } from "../../css/cssDefault";
 
-import linkedIn from '../imgs/icon/linkedIn.svg';
-import linkedInHover from '../imgs/icon/linkedInHover.svg';
-import linkedInHoverBlueGreen from '../imgs/icon/linkedInHoverBlueGreen.svg';
-import faq from '../imgs/icon/faq.svg';
-import faqHover from '../imgs/icon/faqHover.svg';
-import faqHover2 from '../imgs/icon/faqHover2.svg';
-import email from '../imgs/icon/email.svg';
-import emailHover from '../imgs/icon/emailHover.svg';
-import home from '../imgs/icon/home.svg';
-import phone from '../imgs/icon/phone.svg';
-import { UseFormHiddenState, UseFormToggleHandel } from "./hooks";
+import linkedIn from '../../imgs/icon/linkedIn.svg';
+import linkedInHover from '../../imgs/icon/linkedInHover.svg';
+import linkedInHoverBlueGreen from '../../imgs/icon/linkedInHoverBlueGreen.svg';
+import faq from '../../imgs/icon/faq.svg';
+import faqHover from '../../imgs/icon/faqHover.svg';
+import faqHover2 from '../../imgs/icon/faqHover2.svg';
+import email from '../../imgs/icon/email.svg';
+import emailHover from '../../imgs/icon/emailHover.svg';
+import home from '../../imgs/icon/home.svg';
+import phone from '../../imgs/icon/phone.svg';
+import { UseFormToggleHandel } from "../hooks";
 const icons = [home, phone, email];
 
 const TitleWrapper = styled(defaultSection)`

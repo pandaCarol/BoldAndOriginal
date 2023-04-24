@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { defaultSection, defaultsText, defaultSubTitle, defaultTitle, pageTitle } from "../css/cssDefault";
+import { defaultSection, defaultsText, defaultSubTitle, defaultTitle } from "../../css/cssDefault";
 
-import founder from '../imgs/pic/founder.svg';
+import founder from '../../imgs/pic/founder.svg';
 
 const Title = styled(defaultTitle)`
     text-align: center;

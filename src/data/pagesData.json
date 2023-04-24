@@ -99,11 +99,14 @@
         },
         "package": {
             "title": "Which package you are most interesting",
-            "radio": [
+            "id": "selectedPackage",
+            "contents": [
                 "Google Ads Audit",
                 "Google Ads Audit Plus",
                 "I have no idea"
-            ]
+            ],
+            "type": "radio",
+            "ErrMes": "You have to choose one above."
         },                    
         "confirm": [
             "Thanks for contacting us!",

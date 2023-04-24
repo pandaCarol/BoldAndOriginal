@@ -12,17 +12,21 @@ import { NavBar } from './app/NavBar';
 import { FAQ } from './app/FAQ';
 import { Footer } from './app/Footer';
 import { MainPage } from './main';
+import { Leadform } from './app/LeadForm';
+import { HiddenWrapper } from './components/hooks';
 
 
 
 function App() {
   return (
+    <HiddenWrapper>
       <Container>
-            <NavBar />
-            <MainPage />
+          <NavBar />
+          <MainPage />
+          <Leadform />
           <Footer />
       </Container>
-    
+    </HiddenWrapper>
   );
 }
 

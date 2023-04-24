@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Contact, Title } from "../components/footers";
+import { Contact, Title } from "../components/subComponents/footers";
 import { HiddenWrapper, ToggleProviders, UseFormHiddenState } from "../components/hooks";
 import { defaultSection } from "../css/cssDefault";
 

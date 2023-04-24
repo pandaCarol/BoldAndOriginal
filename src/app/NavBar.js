@@ -1,16 +1,15 @@
 import React from "react";
 import styled from 'styled-components';
 
-import { IconWrapper } from "../components/icon";
-import { ContactSale } from "../components/btn";
-import { NavigationBar } from "../components/navBtn";
+import { Logo } from "../components/icons/logo";
+import { ContactSale } from "../components/buttons/contactSales";
+import { NavigationBar } from "../components/subComponents/navBtn";
 
 import logoColor from '../imgs/logo/logoColor.png';
 
 import { defaultSection } from "../css/cssDefault";
 
 import pagesData from '../data/pagesData.json';
-import { Link } from "react-router-dom";
 
 const HeaderWrapper = styled.header`
     position: fixed;
@@ -34,11 +33,11 @@ const NavWrapper = styled(defaultSection)`
 export const NavBar = () => {
     return (
         <HeaderWrapper>
-            <IconWrapper iconLink={logoColor} />
+            <Logo iconLink={logoColor} />
             <NavWrapper>
                 <ContactSale contents={pagesData.header.btn} />
                 <NavigationBar contents={pagesData.header.navbar} />
-            </NavWrapper> 
+            </NavWrapper>
         </HeaderWrapper>
         
     )

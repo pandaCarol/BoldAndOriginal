@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import { defaultButton } from '../css/cssDefault'
+import { defaultButton } from '../../css/cssDefault';
+import { UseFormToggleHandel } from '../hooks';
 
 export const LoginWrapper = styled.div`
     display: ${props => props.display || 'block'};
@@ -10,7 +11,6 @@ export const LoginWrapper = styled.div`
     &:hover {
         cursor: pointer;
     }
-
 `
 export const LoginBtn = styled(defaultButton)`
     margin: auto 1rem;
@@ -38,9 +38,11 @@ export const LoginBtn = styled(defaultButton)`
     }
 `
 export const ContactSale = ({ contents, display }) => {
+    const toHidden = UseFormToggleHandel()
+
     return (
-        <LoginWrapper display={display}>
-           <LoginBtn>{contents}</LoginBtn> 
+        <LoginWrapper display={display} >
+           <LoginBtn onClick={toHidden}>{contents}</LoginBtn> 
         </LoginWrapper>  
     )
 }

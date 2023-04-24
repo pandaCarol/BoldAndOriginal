@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import pagesData from '../../data/pagesData.json';
 
 import styled from "styled-components";
-import { FormsRadio } from './FormSubcomponents';
+import { FormsRadio } from './radio-checkbox';
 import { validedSubmit } from "../../functions/validedSubmit";
 import { defaultItalics } from '../../css/cssDefault';
 import { Terms } from "./terms";
@@ -10,6 +10,8 @@ import { UseFormToggleHandel } from '../hooks';
 
 const Wrapper = styled.div`
     position: relative;
+    margin-bottom: 2rem;
+
     label {
         color: ${props => props.isValid === -1 ? "red" : " rgb(85, 91, 112)"}
     }
@@ -29,7 +31,7 @@ const Wrapper = styled.div`
 const TermsTage = styled(defaultItalics)`
 `
 
-export const Checkbox = ({ register, errors, isSubmit}) => {
+export const Checkbox = ({ register, errors, verified}) => {
     //display props for terms and conditions
     const hiddenToggle = UseFormToggleHandel()
 
@@ -37,7 +39,7 @@ export const Checkbox = ({ register, errors, isSubmit}) => {
 
     const fieldName = [pagesData.forms.dataProtocol.id]
     const errorsArray = Object.keys(errors)
-    const validStatus = validedSubmit(isSubmit, errorsArray, fieldName)
+    const validStatus = validedSubmit(verified, errorsArray, fieldName)
 
     return (
         <div className='checkboxWrapper'>
@@ -54,8 +56,5 @@ export const Checkbox = ({ register, errors, isSubmit}) => {
             </Wrapper>
             <Terms />
         </div>
-        
     )
-
-
 }

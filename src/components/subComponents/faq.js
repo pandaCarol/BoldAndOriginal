@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { defaultSection, defaultsText, defaultSubTitle, defaultUl } from "../css/cssDefault"
+import { defaultSection, defaultsText, defaultSubTitle } from "../../css/cssDefault"
 
-import answer from '../imgs/icon/answer.svg';
+import answer from '../../imgs/icon/answer.svg';
 
 const ItemsWrapper = styled(defaultSection)`
 `

@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
-import { defaultSection } from "../../css/cssDefault";
+import { defaultSection } from "../css/cssDefault";
 
-import { FormsTitle, IconSubmit } from "./FormSubcomponents";
+import { IconSubmit } from "../components/buttons/submit";
+import { FormsTitle } from "../components/forms/FormsTitle";
 
-import pagesData from "../../data/pagesData.json";
-import { UserForm } from "./userInfo";
-import { PainPointsForm } from "./painPointsForm";
-import { HiddenWrapper } from "../hooks";
+import pagesData from "../data/pagesData.json";
+import { UserForm } from "../components/subComponents/usersForm";
+import { PainPointsForm } from "../components/subComponents/painPointsForm";
+import { HiddenWrapper } from "../components/hooks";
 import { useState } from "react";
-import { Checkbox } from "./checkboxProtocol";
-import { ConfirmInfo } from "./submittedConfirm";
+import { Checkbox } from "../components/forms/checkboxProtocol";
+import { ConfirmInfo } from "../components/forms/submittedConfirm";
 
 const Wrapper = styled.div`
     height: 100%;
@@ -99,9 +100,12 @@ const StyledSubTitle = styled(FormsTitle)`
 `
 const StyledSubmit = styled(IconSubmit)`
 `
+const painpointsContent = pagesData.forms.clientsNeeds
+const userInfo = pagesData.forms.clientsInfo
+const userInfoTitle = userInfo.title.onPage
 
 export const FormsComponents = () => {
-    const [doseSubmit, setSubmit] = useState(false)
+    const [verified, setVerified] = useState(false)
     const [submitted, setSubmitted] = useState(false)
     const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -113,14 +117,14 @@ export const FormsComponents = () => {
     }
 
     function handelOnClick() {
-        setSubmit(true);
+        setVerified(true);
     }
 
     useEffect(() => {
         setTimeout(()=>{
-            setSubmit(false)
+            setVerified(false)
         }, 5000)
-    }, [doseSubmit])
+    }, [verified])
 
     
     return (
@@ -132,11 +136,28 @@ export const FormsComponents = () => {
                     <HiddenWrapper>
                         <div className="inputForms">
                             <HiddenWrapper >
-                                <UserForm register={register} errors={errors} isSubmit={doseSubmit} submitted={submitted}/>
-                                <PainPointsForm register={register} errors={errors} isSubmit={doseSubmit} submitted={submitted}/>
-                                <Checkbox register={register} errors={errors} isSubmit={doseSubmit} />
-                                <ConfirmInfo className="confirmInfo" contents={pagesData.forms.confirm} confirm={submitted}/>
-                                <StyledSubmit className="formSubmit" content='Submit' onClick={handelOnClick} />
+                                <UserForm 
+                                    register={register} errors={errors} 
+                                    contents={userInfo} title={userInfoTitle} formHidden={true}
+                                    verified={verified} submitted={submitted}
+                                />
+                                <PainPointsForm 
+                                    register={register} errors={errors} 
+                                    contents={painpointsContent} title={painpointsContent.title} formHidden={true}
+                                    verified={verified} submitted={submitted}
+                                />
+                                <Checkbox 
+                                    register={register} errors={errors} 
+                                    verified={verified} 
+                                />
+                                <ConfirmInfo 
+                                    className="confirmInfo" contents={pagesData.forms.confirm} 
+                                    confirm={submitted}
+                                />
+                                <StyledSubmit 
+                                    className="formSubmit" content='Submit' 
+                                    onClick={handelOnClick} 
+                                />
                             </HiddenWrapper>
                         </div>
                     </HiddenWrapper>

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import iconClose from '../imgs/icon/iconClose.svg';
-import { UseFormToggleHandel } from "./hooks";
+import iconClose from '../../imgs/icon/iconClose.svg';
+import { UseFormToggleHandel } from "../hooks";
 
 const Wrapper = styled.div`
     &&.iconClose {
