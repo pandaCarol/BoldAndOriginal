@@ -22,49 +22,6 @@ const StyledForm = styled(FormsInput)`
 
 const StyledFormWrapper = styled(defaultForm)`
     position: relative;
-    h2 {
-        :hover {
-            height: ${props => props.submitted ? "default" : "3rem"};
-            cursor: ${props => props.submitted ? "default" : "pointer"};
-            .dropDown {
-                background-image: url(${props => props.isHidden ? dropDownHover: goUpHover});
-                top: ${props => props.isHidden ? "0.8rem": "0.5rem" }
-            }
-        }
-
-        .dropDown {
-            background-image: url(${props => props.isHidden ? dropDown: goUp});
-            display: ${props => props.submitted ? "none" : "block"};
-        }
-
-        @keyframes unValid {
-            0%   {transform: rotate(0deg);}
-            20%   {transform: rotate(2deg);}
-            40%  {transform: rotate(0deg);}
-            60%   {transform: rotate(-2deg);}
-            80%  {transform: rotate(0deg);}
-            100% {transform: rotate(2deg);}
-        }
-
-        animation-name: ${props => props.validStatus === -1 ? "unValid": "none"};
-        animation-duration: 0.25s;
-        animation-iteration-count: 3;
-        animation-timing-function: ease-in-out;
-        color: ${props => props.validStatus === -1 ? "#e91640": "#555B70"}
-    }
-
-    .validIcon {
-        display:  ${props => props.validStatus === 1 ? "block": "none"};
-        position: absolute;
-        content: '';
-        background-repeat: no;
-        background-size: contain;
-        width: 1.25rem;
-        height: 1.25rem;
-        top: 0.8rem;
-        right: 35%;
-        background-image: url(${valid});
-    }
 
     .firstName::before{
         background-image: url(${user});
@@ -88,7 +45,6 @@ const Div = styled.div`
         return (props.tobeHidden ? "none" : "block")
     }};
 `
-
 
 export const UserForm = ({ register, errors, verified, submitted, contents, title, formHidden }) => {
    //if form on landing Page, then form content should be hidden and drop down icon should be displayed
@@ -131,7 +87,7 @@ export const UserForm = ({ register, errors, verified, submitted, contents, titl
             <Titles 
                 className='aboutYou' 
                 title={title} dropdownDisplay={formHidden} onClick={toggle}
-                isHidden={hiddenState} submitted={submitted} validstatus={validStatus}
+                isHidden={hiddenState} submitted={submitted} validStatus={validStatus}
             />  
             <Div className="inputForms" tobeHidden={hiddenState} submitted={submitted}>{infosForm}</Div>
         </StyledFormWrapper>

@@ -18,6 +18,7 @@ import { BackToHome } from "../components/buttons/backToHome";
 import { Logo } from "../components/icons/logo";
 
 import logoColor from '../imgs/logo/logoColor.png';
+import { SubPageTitleWrapper } from "../components/subComponents/subpageTitle";
 
 const Wrapper = styled(defaultSection)`
     display: ${props => props.isHidden ? 'none' : 'default'};
@@ -30,23 +31,23 @@ const Wrapper = styled(defaultSection)`
     padding: 3rem auto;
     bottom: 0;
 
-    {/*for logo*/}
-    .logo {
-
+    {/*for title color*/}
+    .titleWrapper {
+        h2 {
+            color: rgb(85, 91, 112);
+            margin: auto 0;
+        }
     }
+    
 
     {/*for cross icon*/}
     &&.leadform .iconClose {
-        top: 2.7rem;
+        top: 3.7rem;
         z-index: 9;
-    }
 
-    {/*for title */};
-    > h2 {
-        padding-top: 7rem;
-        text-align: center;
-        font-weight: 700;
-        font-size: 1.2rem;
+        :hover {
+            top: 3.5rem;
+        }
     }
 
     form {
@@ -179,9 +180,7 @@ export const Leadform = () => {
             className="leadform"
             submitted={submitted} isHidden={isHidden}
         >
-            <Logo iconLink={logoColor}/>
-            <CloseBtn />
-            <FormsTitle>{contents.title}</FormsTitle>
+            <SubPageTitleWrapper title={contents.title}/>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="formspart" submitted={submitted}>
                     <PainPointsForm 

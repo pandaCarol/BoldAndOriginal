@@ -10,25 +10,9 @@ import { Titles } from "../forms/FormsTitle";
 
 const Wrapper = styled(StyledFormWrapper)`
     margin-bottom: ${props => props.submitted ? '2rem' : '1rem'};
-    h2 {
-        @keyframes unValid {
-            0%   {transform: rotate(0deg);}
-            20%   {transform: rotate(2deg);}
-            40%  {transform: rotate(0deg);}
-            60%   {transform: rotate(-2deg);}
-            80%  {transform: rotate(0deg);}
-            100% {transform: rotate(2deg);}
-        }
-
-        animation-name: ${props => props.validStatus === -1 ? "unValid": "none"};
-        animation-duration: 0.25s;
-        animation-iteration-count: 3;
-        animation-timing-function: ease-in-out;
-        color: ${props => props.validStatus === -1 ? "#e91640": "#555B70"};
-
-        .validIcon {
-            right: 3%;
-        }
+    
+    .validIcon {
+        right: 3%;
     }
 
     .selectedPackage {
@@ -66,7 +50,7 @@ export const SelectedPackage = ({ register, errors, verified, submitted, formHid
    function initialState () {
         return (formHidden === true ? true : false)
    }
-    
+
     const fieldName = [radio.id]
     const errorsArray = Object.keys(errors)
     const validStatus = validedSubmit(verified, errorsArray, fieldName)
@@ -75,8 +59,8 @@ export const SelectedPackage = ({ register, errors, verified, submitted, formHid
         <Wrapper className="packages" isHidden={hiddenState} submitted={submitted}>
             <Titles 
                 className=' packagesTitles'
-                title={radio.title}
-                isHidden={hiddenState} submitted={submitted} validstatus={validStatus}
+                title={radio.title} dropdownDisplay={formHidden}
+                isHidden={hiddenState} submitted={submitted} validStatus={validStatus}
             />
             <SelectedRadio 
                 type = {radio.type}

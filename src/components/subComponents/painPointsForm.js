@@ -16,58 +16,11 @@ import goUpHover from '../../imgs/forms/goUpHover.svg';
 import goUp from '../../imgs/forms/goUp.svg';
 import valid from '../../imgs/forms/valid.svg';
 
-export const StyledTitle = styled(FormsTitle)`
-    background-color: #EBD134;
-
-    border-radius: ${props => (props.isHidden || props.submitted) ? "0.55rem" : "0.55rem 0.55rem 0 0"};
-`
-
 export const StyledFormWrapper = styled(defaultForm)`
     position: relative;
 
-    h2 {
-        :hover {
-            height: ${props => props.submitted ? "default" : "3rem"};
-            cursor: ${props => props.submitted ? "default" : "pointer"};
-            .dropDown {
-                background-image: url(${props => props.isHidden ? dropDownHover: goUpHover});
-                top: ${props => props.isHidden ? "0.8rem": "0.5rem" };  
-            }
-        }
-        @keyframes unValid {
-            0%   {transform: rotate(0deg);}
-            20%   {transform: rotate(2deg);}
-            40%  {transform: rotate(0deg);}
-            60%   {transform: rotate(-2deg);}
-            80%  {transform: rotate(0deg);}
-            100% {transform: rotate(2deg);}
-        }
-        animation-name: ${props => props.validStatus === -1 ? "unValid": "none"};
-        animation-duration: 0.25s;
-        animation-iteration-count: 3;
-        animation-timing-function: ease-in-out;
-        color: ${props => props.validStatus === -1 ? "#e91640": "#555B70"}
-}
-
-    .dropDown {
-        background-image: url(${props => props.isHidden ? dropDown: goUp});
-        display: ${props => props.submitted ? "none" : "block"};
-    }
-
-    .validIcon {
-        display:  ${props => props.validStatus === 1 ? "block": "none"};
-        position: absolute;
-        content: '';
-        background-repeat: no;
-        background-size: contain;
-        width: 1.25rem;
-        height: 1.25rem;
-        top: 0.8rem;
-        right: 35%;
-        background-image: url(${valid});
-    }
-
     .inputForms {
+        display: ${props => props.tobeHidden};
         .hasAds, .webURL, .painPoint {
             padding: calc(0.3rem + 1vh) 1rem;
         }
@@ -102,10 +55,6 @@ export const StyledFormWrapper = styled(defaultForm)`
             }
         }
     }
-
-    .inputForms {
-        display: ${props => props.tobeHidden};
-    }
 `
 const Div = styled.div`
     display: ${props => {
@@ -116,7 +65,7 @@ const Div = styled.div`
     }};
 `
 
-export const PainPointsForm = ({ register, errors, isSubmit, submitted, contents, title, formHidden }) => {
+export const PainPointsForm = ({ register, errors, verified, submitted, contents, title, formHidden }) => {
     //if form on landing Page, then form content should be hidden and drop down icon should be displayed
     //means hiddenState -> true, <DropDown> props toDisplay -> true
     
@@ -139,9 +88,9 @@ export const PainPointsForm = ({ register, errors, isSubmit, submitted, contents
     const fieldName = Object.keys(contents)
     fieldName.shift()
     const errorsArray = Object.keys(errors)
-    const validStatus = validedSubmit(isSubmit, errorsArray, fieldName)
-    //console.log(validStatus)
-
+    const validStatus = validedSubmit(verified, errorsArray, fieldName)
+    console.log(validStatus)
+    
     return (
         <StyledFormWrapper className='painpoint' isHidden={hiddenState} validStatus={validStatus} submitted={submitted}>
             <Titles 
@@ -158,7 +107,7 @@ export const PainPointsForm = ({ register, errors, isSubmit, submitted, contents
                     radioValueArray={radio.answer}
                     register={register}
                     errors={errors}
-                    isSubmit={isSubmit}
+                    isSubmit={verified}
                     isRequired={true}
                     reminder={radio.ErrMes}
                 />

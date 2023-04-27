@@ -6,6 +6,7 @@ import { ContactSale } from "../components/buttons/contactSales";
 import { NavigationBar } from "../components/subComponents/navBtn";
 
 import logoColor from '../imgs/logo/logoColor.png';
+import logoColorHover from '../imgs/logo/logoColor-hover.svg';
 
 import { defaultSection } from "../css/cssDefault";
 
@@ -21,6 +22,10 @@ const HeaderWrapper = styled.header`
 
     display: flex;
     padding: 2vh 0;
+
+    .logo:hover{
+        content: url(${logoColorHover});
+    }
 `
 const NavWrapper = styled(defaultSection)`
     
@@ -29,6 +34,10 @@ const NavWrapper = styled(defaultSection)`
     width: 100%;
     margin: 1rem 2rem;
 `
+
+
+
+
 
 export const NavBar = () => {
     return (

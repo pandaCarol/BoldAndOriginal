@@ -5,8 +5,8 @@ import { defaultSection, defaultTitle } from "../css/cssDefault";
 
 import pagesData from '../data/pagesData.json';
 
-import { CloseBtn } from "../components/icons/cross-icon";
 import { UseFormHiddenState } from "../components/hooks";
+import { SubPageTitleWrapper } from "../components/subComponents/subpageTitle";
 
 const FAQWrapper = styled(defaultSection)`
     position: fixed;
@@ -19,6 +19,13 @@ const FAQWrapper = styled(defaultSection)`
     height: 100vh;
     width: 100%;
 
+    .logo {
+        width: 120px;
+        height: 75.2px;
+        margin: 0;
+        pointer-events: none;
+    }
+
     .titleWrapper {
         position: sticky;
 
@@ -30,29 +37,13 @@ const FAQWrapper = styled(defaultSection)`
         }
     }
 `
-const Title = styled(defaultTitle)`
-`
-const TitleWrapper = styled.div`
-    padding: 1rem 0;
-    background-color: rgb(235, 209, 52);
-    width: 100%;
-    top: 0;
-    z-index: 5;
-
-    display: grid;
-    grid-template-columns: 50fr 1fr;
-`
-const closeBtn = <CloseBtn />
 
 export const FAQ = () => {
     const isHidden = UseFormHiddenState()
     //console.log(isHidden)
     return (
         <FAQWrapper style={{'display': `${isHidden ? 'none' : 'block'}`}}>
-            <TitleWrapper className="titleWrapper" >
-                <Title>{pagesData.faq.title}</Title>
-                {closeBtn}
-            </TitleWrapper>
+            <SubPageTitleWrapper title={pagesData.faq.title}/>
             <FAQContent lists={pagesData.faq.content}/>
         </FAQWrapper> 
     )

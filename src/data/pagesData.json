@@ -37,13 +37,13 @@
                 {
                     "content": "First Name",
                     "ErrMes": "Please enter your first name",
-                    "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20",
+                    "patternReminder": "Name could start with a Capital letter(A-Z) followed by 1-20 letters(a-zA-Z) without space",
                     "type": "text"
                 },
                 {
                     "content": "Last Name",
                     "ErrMes": "Please enter your last name",
-                    "patternReminder": "Name could be  basic letter(a-zA-Z) wihout space, length 2-20",
+                    "patternReminder": "Name could start with a Capital letter(A-Z) followed by 1-20 letters(a-zA-Z -,.')",
                     "type": "text"
                 },
                 {
