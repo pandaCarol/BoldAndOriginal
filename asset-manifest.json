@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/BoldAndOriginal/static/css/main.f342412b.css",
-    "main.js": "/BoldAndOriginal/static/js/main.e00a74d6.js",
+    "main.js": "/BoldAndOriginal/static/js/main.a812e500.js",
     "static/js/787.8f8ceedd.chunk.js": "/BoldAndOriginal/static/js/787.8f8ceedd.chunk.js",
     "static/media/bg.png": "/BoldAndOriginal/static/media/bg.774ec753d08d56bed347.png",
     "static/media/pricingBg.svg": "/BoldAndOriginal/static/media/pricingBg.ecb2be20005e9a7cd654fd53a3843b4f.svg",
     "static/media/founder.svg": "/BoldAndOriginal/static/media/founder.aa7237d348afae4239b8e47d813ffac5.svg",
     "static/media/feature.jpg": "/BoldAndOriginal/static/media/feature.402d0353cac5f98a382a.jpg",
-    "static/media/logoColor-hover.svg": "/BoldAndOriginal/static/media/logoColor-hover.7dbae72140e40aa1e3753fdd7d3fe9d8.svg",
+    "static/media/logoColor-hover.svg": "/BoldAndOriginal/static/media/logoColor-hover.55240be99ec8d6275b8c6fee3fcc8bb3.svg",
     "static/media/logoColor.png": "/BoldAndOriginal/static/media/logoColor.d78a092ed7b2b0102406.png",
     "static/media/faqHover.svg": "/BoldAndOriginal/static/media/faqHover.210425b46c761ff7c50b9f20f1a12752.svg",
     "static/media/settings.svg": "/BoldAndOriginal/static/media/settings.03f33ac0fe1739e5452f8b157a4ab58b.svg",
@@ -27,11 +27,11 @@
     "static/media/email.svg": "/BoldAndOriginal/static/media/email.3c72f594fd700a13fbf96c38f7ad9287.svg",
     "static/media/emailHover.svg": "/BoldAndOriginal/static/media/emailHover.e42df97225325ef41cbe0fab39c7b9f6.svg",
     "static/media/user.svg": "/BoldAndOriginal/static/media/user.7b18556ec7240b0f295fab76d4ca7816.svg",
+    "index.html": "/BoldAndOriginal/index.html",
     "static/media/home.svg": "/BoldAndOriginal/static/media/home.533a8ce34815a1a6badae53d00099e68.svg",
     "static/media/grant.svg": "/BoldAndOriginal/static/media/grant.daf043aee9bfb5c88863432905805d0e.svg",
     "static/media/backHome.svg": "/BoldAndOriginal/static/media/backHome.5d28be7a17aecb5bced962eaac17a659.svg",
     "static/media/backHomeHover.svg": "/BoldAndOriginal/static/media/backHomeHover.66f9e293616ce6b2975f1fcad493d7bd.svg",
-    "index.html": "/BoldAndOriginal/index.html",
     "static/media/upload.svg": "/BoldAndOriginal/static/media/upload.1c33de8277f95ba241b479a3c8a3e642.svg",
     "static/media/valid.svg": "/BoldAndOriginal/static/media/valid.79abcbb9016d84830ed72375ed7e6adb.svg",
     "static/media/dropDown.svg": "/BoldAndOriginal/static/media/dropDown.815051ed3758f2e10a1a36d9a21143d0.svg",
@@ -44,11 +44,11 @@
     "static/media/bgPricing300.svg": "/BoldAndOriginal/static/media/bgPricing300.c2b197936d7b2997bbac11f7e075f62f.svg",
     "static/media/bgPricing500.svg": "/BoldAndOriginal/static/media/bgPricing500.b094ceaac4884fe3135c7498e4c58aba.svg",
     "main.f342412b.css.map": "/BoldAndOriginal/static/css/main.f342412b.css.map",
-    "main.e00a74d6.js.map": "/BoldAndOriginal/static/js/main.e00a74d6.js.map",
+    "main.a812e500.js.map": "/BoldAndOriginal/static/js/main.a812e500.js.map",
     "787.8f8ceedd.chunk.js.map": "/BoldAndOriginal/static/js/787.8f8ceedd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f342412b.css",
-    "static/js/main.e00a74d6.js"
+    "static/js/main.a812e500.js"
   ]
 }
